@@ -1,0 +1,102 @@
+/* Calendar.css */
+.calendar {
+    width: 70%;
+    margin: 100px auto;
+    font-family: Arial, sans-serif;
+    background: white;
+    border-radius: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-header button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-header button:hover {
+    background-color: #f0f0f0;
+    color: #6c5ce7;
+    transform: scale(1.1);
+}
+
+.calendar-header button:active {
+    transform: scale(0.95);
+}
+
+.calendar-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 10px 0;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-weekdays div {
+    font-weight: 600;
+    color: #495057;
+}
+
+.calendar-weekdays .sunday {
+    color: #ff6b6b;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: #eee;
+}
+
+.calendar-day {
+    position: relative;
+    min-height: 100px;
+    padding: 10px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.calendar-day.empty {
+    background: #f9f9f9;
+}
+
+.day-number {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.day-number.sunday {
+    color: #ff6b6b;
+}
+
+.day-data {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+}

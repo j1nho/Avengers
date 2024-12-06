@@ -1,0 +1,97 @@
+.title {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #aaa;
+}
+
+/* Schedule_box */
+.Schedule_box h1 {
+    padding: 75px 0 0 70px;
+    font-size: 40px;
+    border: none;
+}
+.Schedule_box p {
+    padding: 0 0 20px 70px;
+    color: #aaa;
+    font-size: 18px;
+}
+
+/* Schedule_menu */
+.Schedule_menu {
+    display: flex;
+}
+.Schedule_menu li {
+    padding: 30px 30px 10px 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    margin-left: 150px;
+}
+.Schedule_menu li:first-child {
+    border-bottom: 5px solid #E87D7D;
+}
+
+/* box */
+.contents_box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.box {
+    width: 400px;
+    height: 650px;
+    padding: 25px 0 0 35px;
+    background: rgba(232, 125, 125, 0.35);
+}
+.box:nth-of-type(2), .box:nth-of-type(3) {
+    background: none;
+    border: 1px solid #E87D7D;
+    border-radius: 10px;
+}
+
+.box input {
+    width: 150px;
+    height: 30px;
+    margin: 15px 0;
+    border: none;
+    border-bottom: 1px solid #E87D7D;
+}
+
+.box .schedule_btn1 {
+    width: 350px;
+    display: flex;
+    justify-content: left;
+}
+.box .schedule_btn1 .schedule_btn01 {
+    width: 100px;
+    height: 30px;
+    margin: 15px 15px 15px 0;
+    font-size: 16px;
+    color: #000;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+.box input:nth-of-type(2), .box input:nth-of-type(3) {
+    width: 180px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+.box p {
+    color: #777;
+}
+
+.box .schedule_btn1 .schedule_btn03, .box .schedule_btn1 .schedule_btn04 {
+    width: 140px;
+    height: 50px;
+    margin: 25px 15px 15px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #E87D7D;
+    border: none;
+    border-radius: 10px;
+}
+

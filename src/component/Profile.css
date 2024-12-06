@@ -1,0 +1,163 @@
+{/* Profile_container*/}
+.Profile_container {
+    width: 100%;
+    height: 50%;
+}
+
+{/* Profile1 */}
+.Profile {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+{/* Profile_box1 */}
+.Profile_box1 {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #aaa;
+    margin: 30px;
+}
+
+{/* Profile_box2 */}
+.Profile_box2 {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin: 30px;
+}
+.Profile_box2 h2 {
+    padding: 25px 0 0 35px;
+    font-size: 20px;
+}
+.Profile_box2 h3 {
+    font-size: 25px;
+}
+.Profile_box2 ul {
+    text-align: center;
+    padding: 20px;
+}
+.Profile_box2 ul li {
+    padding: 5px;
+}
+.Profile_box2 ul li:first-of-type {
+    color: #ccc;
+}
+
+{/* Profile_box3 */}
+.Profile_box3 {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin: 30px;
+    /*justify-items: center;*/
+
+}
+.Profile_box3 h2 {
+    padding: 25px 0 0 35px;
+    font-size: 20px;
+}
+.Profile_box3 ul {
+    text-align: center;
+    padding: 25px 0 0 0;
+}
+.Profile_box3 ul li {
+    padding: 5px;
+}
+.Profile_box3 button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f89f9f;
+    color: #fff;
+}
+{/* ---------------------- Profile1 --------------------- */}
+
+
+
+{/* Profile2 */}
+.Profile2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+{/* Profile_box4 */}
+.Profile_box4 {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin: 30px;
+}
+.Profile_box4 h2 {
+    padding: 25px 0 0 35px;
+    font-size: 20px;
+}
+
+{/* Profile_box5 */}
+.Profile_box5 {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin: 30px;
+}
+.Profile_box5 h2 {
+    padding: 25px 0 0 35px;
+    font-size: 20px;
+}
+.circle1 {
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border: 20px solid #f89f9f;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 110px;
+}
+
+{/* Profile_box6 */}
+.Profile_box6 {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin: 30px;
+}
+.Profile_box6 h2 {
+    padding: 25px 0 0 35px;
+    font-size: 20px;
+}
+.circle2 {
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border: 20px solid #f89f9f;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 110px;
+}
+
+{/* ---------------------- Profile2 --------------------- */}
+
+.circle_box {
+    width: 100%;
+    justify-items: center;
+    padding-top: 10px;
+}
+
+.btn {
+    width: 100%;
+    justify-items: center;
+    padding-top: 10px;
+    text-align: center;
+}
