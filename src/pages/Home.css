@@ -1,11 +1,24 @@
-{/* Profile_container*/}
-.Profile_container {
+/* Home_wrap */
+.Home_wrap {
     width: 100%;
-    height: 50%;
+    height: 100%;
 }
 
-{/* Profile1 */}
-.Profile {
+{/* Home_container*/}
+.Home_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Home_contents */
+.Home_contents {
+    width: 85%;
+    height: 100%;
+}
+
+{/* Home1 */}
+.Home1 {
     width: 100%;
     height: 50%;
     display: flex;
@@ -13,62 +26,61 @@
     margin-bottom: 30px;
 }
 
-{/* Profile_box1 */}
-.Profile_box1 {
+{/* Home_box1 */}
+.Home_box1 {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     margin: 30px;
 }
 
-{/* Profile_box2 */}
-.Profile_box2 {
+{/* Home_box2 */}
+.Home_box2 {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     border-radius: 15px;
     margin: 30px;
 }
-.Profile_box2 h2 {
+.Home_box2 h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
-.Profile_box2 h3 {
+.Home_box2 h3 {
     font-size: 25px;
 }
-.Profile_box2 ul {
+.Home_box2 ul {
     text-align: center;
     padding: 20px;
 }
-.Profile_box2 ul li {
+.Home_box2 ul li {
     padding: 5px;
 }
-.Profile_box2 ul li:first-of-type {
+.Home_box2 ul li:first-of-type {
     color: #ccc;
 }
 
-{/* Profile_box3 */}
-.Profile_box3 {
+{/* Home_box3 */}
+.Home_box3 {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     border-radius: 15px;
     margin: 30px;
-    /*justify-items: center;*/
 
 }
-.Profile_box3 h2 {
+.Home_box3 h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
-.Profile_box3 ul {
+.Home_box3 ul {
     text-align: center;
     padding: 25px 0 0 0;
 }
-.Profile_box3 ul li {
+.Home_box3 ul li {
     padding: 5px;
 }
-.Profile_box3 button {
+.Home_box3 button {
     width: 150px;
     height: 50px;
     font-size: 20px;
@@ -78,40 +90,40 @@
     background-color: #f89f9f;
     color: #fff;
 }
-{/* ---------------------- Profile1 --------------------- */}
+{/* ---------------------- Home1 --------------------- */}
 
 
 
-{/* Profile2 */}
-.Profile2 {
+{/* Home2 */}
+.Home2 {
     width: 100%;
     height: 50%;
     display: flex;
     margin-bottom: 30px;
 }
 
-{/* Profile_box4 */}
-.Profile_box4 {
+{/* Home_box4 */}
+.Home_box4 {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     border-radius: 15px;
     margin: 30px;
 }
-.Profile_box4 h2 {
+.Home_box4 h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
 
-{/* Profile_box5 */}
-.Profile_box5 {
+{/* Home_box5 */}
+.Home_box5 {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     border-radius: 15px;
     margin: 30px;
 }
-.Profile_box5 h2 {
+.Home_box5 h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
@@ -125,15 +137,15 @@
     line-height: 110px;
 }
 
-{/* Profile_box6 */}
-.Profile_box6 {
+{/* Home_box6 */}
+.Home_box6 {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     border-radius: 15px;
     margin: 30px;
 }
-.Profile_box6 h2 {
+.Home_box6 h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
@@ -147,7 +159,7 @@
     line-height: 110px;
 }
 
-{/* ---------------------- Profile2 --------------------- */}
+{/* ---------------------- Home2 --------------------- */}
 
 .circle_box {
     width: 100%;
@@ -155,7 +167,7 @@
     padding-top: 10px;
 }
 
-.btn {
+.Home_btn {
     width: 100%;
     justify-items: center;
     padding-top: 10px;

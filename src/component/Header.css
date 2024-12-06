@@ -9,7 +9,8 @@
 
 {/* logo */}
 .logo {
-    padding: 0 30px;
+    margin-top: 10px;
+    padding: 0 80px;
     align-self: center;
 }
 .logo a {
@@ -30,6 +31,9 @@
 }
 .icon li {
     padding-right: 50px;
+}
+.icon li:hover svg {
+    color: #E87D7D;
 }
 .icon li a{
     text-decoration: none;

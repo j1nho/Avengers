@@ -1,0 +1,63 @@
+/* LoginPage */
+.LoginPage {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 200px;
+}
+
+.Login_box {
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.Login_box h1 {
+    padding: 30px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.LoginBox {
+    display: block;
+    justify-items: center;
+}
+
+.LoginBox p {
+    font-size: 20px;
+    color: #777777;
+}
+
+.LoginBox input {
+    width: 300px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+}
+
+.emailBox {
+    text-align: left;
+}
+
+.passwordBox {
+    text-align: left;
+    padding: 30px 0 40px 0;
+}
+
+.mfeo {
+    width: 108px;
+    height: 58px;
+}
+
+button.login {
+    background-color: #E87D7D;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+}
+

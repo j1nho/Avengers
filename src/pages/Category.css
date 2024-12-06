@@ -65,7 +65,7 @@
     font-size: 40px;
     border: none;
 }
-button {
+.category_btn {
     width: 150px;
     height: 40px;
     margin: 30px 60px 0 15px;

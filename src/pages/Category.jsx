@@ -11,7 +11,7 @@ const Category = () => {
                 <div className={"Category_container"}>
                     <div className={"title"}>
                         <h1>카테고리별 내역</h1>
-                        <button>가계부 작성 📝</button>
+                        <button className={"category_btn"}>가계부 작성 📝</button>
                     </div>
                     <ul>
                         <li><input type={"checkbox"}/>분류</li>

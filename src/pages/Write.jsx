@@ -46,8 +46,8 @@ const Write = () => {
                         <input type={"text"}/>
                         <input type={"text"}/>
                         <input type={"text"}/>
-                        <button>추가</button>
-                        <button>X</button>
+                        <button className={"add_btn"}>추가</button>
+                        <button className={"delete_btn"}>X</button>
                     </div>
                 </div>
             </div>

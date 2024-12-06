@@ -2,7 +2,7 @@ import Calendar from "../component/Calendar";
 import Header from "../component/Header";
 import Aside from "../component/Aside";
 
-const Thismonth = () => {
+const ThisMonth = () => {
     return (
         <div>
             <Header/>
@@ -13,4 +13,4 @@ const Thismonth = () => {
         </div>
     )
 }
-export default Thismonth
+export default ThisMonth
