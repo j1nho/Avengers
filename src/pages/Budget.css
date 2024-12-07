@@ -1,0 +1,86 @@
+.Budget_Page {
+    width: 85%;
+    height: 100vh;
+}
+
+.Budget_box h1 {
+    padding: 75px 0 0 70px;
+    font-size: 40px;
+    border: none;
+}
+.Budget_box p {
+    padding: 0 0 20px 70px;
+    color: #aaa;
+    font-size: 18px;
+}
+.btn {
+    text-align: right;
+    height: 100px;
+    align-content: center;
+}
+.budget_btn {
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    background: #ffffff;
+    border: 1px solid #EFA0A2;
+    border-radius: 5px;
+    color: #EFA0A2;
+    margin-right: 100px;
+}
+
+.budget_container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.budget_contents {
+    margin: 0 auto;
+    width: 90%;
+    height: 39%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+
+.budget_contents2 {
+    margin: 0 auto;
+    width: 90%;
+    height: 43%;
+    display: flex;
+    justify-content: space-around;
+}
+.budget_contents  div {
+    width: 450px;
+    height: 330px;
+    border: 1px solid #E87D7D;
+    border-radius: 10px;
+}
+
+.budget_contents div h3 {
+    font-size: 20px;
+    padding: 20px 0 0 30px;
+}
+
+.budget_contents2 {
+    justify-content: space-between;
+}
+
+.budget_contents2 div:nth-of-type(1) {
+    width: 935px;
+    height: 330px;
+    border: 1px solid #E87D7D;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.budget_contents2 div:nth-of-type(2) {
+    width: 450px;
+    height: 330px;
+    border: 1px solid #E87D7D;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.budget_contents2 div:nth-of-type(1) h3,.budget_contents2 div:nth-of-type(2) h3{
+    padding: 20px 0 0 30px;
+}
