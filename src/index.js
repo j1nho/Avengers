@@ -10,8 +10,9 @@ import Analyze from "./pages/Analyze";
 import Budget from "./pages/Budget";
 import Profile from "./pages/Profile";
 import Save from "./pages/Save";
+import Home from "./pages/Home";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Save />
+    <Budget />
 );

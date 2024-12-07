@@ -4,12 +4,12 @@ import './Save.css'
 
 const Save = () => {
     return (
-        <div>
+        <div className={"SavePage"}>
             <Header/>
-            <div className={"SavePage"}>
+            <div className={"Save_container"}>
                 <Aside/>
-                <div className={"Save_container"}>
-                    <div className={"title"}>
+                <div className={"Save_contents"}>
+                    <div className={"Save_title"}>
                         <h1>이번 달 모은 돈</h1>
                     </div>
                     <p>추후 제작 예정입니다.</p>

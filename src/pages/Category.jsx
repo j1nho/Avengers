@@ -4,14 +4,14 @@ import './Category.css'
 
 const Category = () => {
     return (
-        <div>
+        <div className={"CategoryPage"}>
             <Header/>
-            <div className="App_box">
+            <div className="Category_container">
                 <Aside/>
-                <div className={"Category_container"}>
-                    <div className={"title"}>
+                <div className={"Category_contents"}>
+                    <div className={"Category_title"}>
                         <h1>카테고리별 내역</h1>
-                        <button className={"category_btn"}>가계부 작성 📝</button>
+                        <button className={"Category_btn"}>가계부 작성 📝</button>
                     </div>
                     <ul>
                         <li><input type={"checkbox"}/>분류</li>
@@ -21,7 +21,6 @@ const Category = () => {
                         <li>금액</li>
                         <li>메모</li>
                     </ul>
-
                 </div>
             </div>
         </div>

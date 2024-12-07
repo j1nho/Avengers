@@ -7,10 +7,10 @@ const Profile = () => {
     return (
         <div className="ProfilePage">
             <Header/>
-            <div className={"Profile_contents"}>
+            <div className={"Profile_container"}>
                 <Aside/>
-                <div className={"Profile_contentsBox"}>
-                    <div className={"title"}>
+                <div className={"Profile_contents"}>
+                    <div className={"Profile_title"}>
                         <h1>프로필 설정</h1>
                     </div>
                     <div className={"Profile_setting"}>

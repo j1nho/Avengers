@@ -1,86 +1,83 @@
 /* Home_wrap */
 .Home_wrap {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+
 }
 
-{/* Home_container*/}
+/* Home_container*/
 .Home_container {
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
 }
 
-/* Home_contents */
-.Home_contents {
+/* Home_wrapper */
+.Home_wrapper {
     width: 85%;
     height: 100%;
 }
 
-{/* Home1 */}
-.Home1 {
+/* Home_Box */
+.Home_Box {
     width: 100%;
     height: 50%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Home_contents */
+.Home_contents {
+    width: 100%;
+    height: 60%;
     display: flex;
-    box-sizing: border-box;
-    margin-bottom: 30px;
+    justify-content: space-around;
+    margin: 30px 0 0 0;
 }
 
-{/* Home_box1 */}
-.Home_box1 {
-    width: 30%;
-    height: 100%;
-    border: 1px solid #aaa;
-    margin: 30px;
-}
-
-{/* Home_box2 */}
-.Home_box2 {
+/* Home_infoBox */
+.Home_infoBox {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     border-radius: 15px;
-    margin: 30px;
 }
-.Home_box2 h2 {
+.Home_infoBox:first-of-type {
+    width: 35%;
+}
+
+/* .Home_infoBox(2) */
+.Home_infoBox:nth-of-type(2) h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
-.Home_box2 h3 {
+.Home_infoBox:nth-of-type(2) h3 {
     font-size: 25px;
 }
-.Home_box2 ul {
+.Home_infoBox:nth-of-type(2) ul {
     text-align: center;
     padding: 20px;
 }
-.Home_box2 ul li {
+.Home_infoBox:nth-of-type(2) ul li {
     padding: 5px;
 }
-.Home_box2 ul li:first-of-type {
+.Home_infoBox:nth-of-type(2) ul li:first-of-type {
     color: #ccc;
 }
 
-{/* Home_box3 */}
-.Home_box3 {
-    width: 30%;
-    height: 100%;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    margin: 30px;
-
-}
-.Home_box3 h2 {
+/* .Home_infoBox(3) */
+.Home_infoBox:nth-of-type(3) h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
-.Home_box3 ul {
+.Home_infoBox:nth-of-type(3) ul {
     text-align: center;
     padding: 25px 0 0 0;
 }
-.Home_box3 ul li {
+.Home_infoBox:nth-of-type(3) ul li {
     padding: 5px;
 }
-.Home_box3 button {
+.Home_infoBox:nth-of-type(3) button {
     width: 150px;
     height: 50px;
     font-size: 20px;
@@ -90,43 +87,34 @@
     background-color: #f89f9f;
     color: #fff;
 }
-{/* ---------------------- Home1 --------------------- */}
+/* ------------------------------- Home_contents ----------------------------- */
 
 
 
-{/* Home2 */}
-.Home2 {
+{/* Home_contents2 */}
+.Home_contents2 {
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
-    margin-bottom: 30px;
+    justify-content: space-around;
+    margin: 30px 0 0 0;
 }
 
-{/* Home_box4 */}
-.Home_box4 {
+{/* Home_infoBox2 */}
+.Home_infoBox2 {
     width: 30%;
     height: 100%;
     border: 1px solid #aaa;
     border-radius: 15px;
-    margin: 30px;
 }
-.Home_box4 h2 {
+.Home_infoBox2:first-of-type {
+    width: 35%;
+}
+.Home_infoBox2 h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
 
-{/* Home_box5 */}
-.Home_box5 {
-    width: 30%;
-    height: 100%;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    margin: 30px;
-}
-.Home_box5 h2 {
-    padding: 25px 0 0 35px;
-    font-size: 20px;
-}
 .circle1 {
     width: 150px;
     height: 150px;
@@ -137,18 +125,6 @@
     line-height: 110px;
 }
 
-{/* Home_box6 */}
-.Home_box6 {
-    width: 30%;
-    height: 100%;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    margin: 30px;
-}
-.Home_box6 h2 {
-    padding: 25px 0 0 35px;
-    font-size: 20px;
-}
 .circle2 {
     width: 150px;
     height: 150px;
@@ -158,8 +134,7 @@
     text-align: center;
     line-height: 110px;
 }
-
-{/* ---------------------- Home2 --------------------- */}
+/* -------------------------------- Home_contents2 ------------------------------ */
 
 .circle_box {
     width: 100%;
@@ -173,3 +148,5 @@
     padding-top: 10px;
     text-align: center;
 }
+
+/*--------------------------------------circle, button----------------------------------*/

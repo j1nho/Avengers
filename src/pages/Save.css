@@ -1,18 +1,25 @@
-.Save_container {
-    width: 85%;
-    height: 100vh;
-}
-.Save_container h1 {
-    height: 150px;
-    padding: 75px 0 30px 70px;
-}
+/* SavePage */
 .SavePage {
-    display: flex;
     width: 100%;
     height: 100%;
 }
 
-.title {
+/* Save_container */
+.Save_container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+/* Save_contents */
+.Save_contents {
+    width: 85%;
+}
+.Save_contents h1 {
+    height: 150px;
+    padding: 75px 0 30px 70px;
+}
+.Save_contents .Save_title {
     width: 95%;
     margin: auto;
     display: flex;
@@ -20,8 +27,7 @@
     align-items: center;
     border-bottom: 1px solid #aaa;
 }
-
-.Save_container p {
+.Save_contents p {
     text-align: center;
     line-height: 650px;
     font-size: 20px;
