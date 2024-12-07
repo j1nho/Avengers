@@ -1,4 +1,3 @@
-// Calendar.js
 import React, { useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import './Calendar.css';

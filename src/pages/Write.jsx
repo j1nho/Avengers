@@ -4,12 +4,12 @@ import './Write.css'
 
 const Write = () => {
     return (
-        <div>
+        <div className={"WritePage"}>
             <Header/>
-            <div className="App_box">
+            <div className="Write_container">
                 <Aside/>
-                <div className={"Write_container"}>
-                    <div className={"title"}>
+                <div className={"Write_contents"}>
+                    <div className={"Write_title"}>
                         <h1>가계부 작성</h1>
                     </div>
                     <ul>
@@ -21,7 +21,7 @@ const Write = () => {
                         <li>금액</li>
                         <li>메모</li>
                     </ul>
-                    <div className={"Write_content"}>
+                    <div className={"Write_info"}>
                         <select>
                             <option value="text">선택</option>
                             <option value="text">지출</option>

@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Write from "./pages/Write";
 import Category from "./pages/Category";
-import Thismonth from "./pages/Thismonth";
+import ThisMonth from "./pages/ThisMonth";
 import Schedule from "./pages/Schedule";
 import Analyze from "./pages/Analyze";
 import Budget from "./pages/Budget";

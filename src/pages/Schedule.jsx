@@ -4,12 +4,12 @@ import './Schedule.css'
 
 const Schedule = () => {
     return (
-        <div>
+        <div className={"SchedulePage"}>
             <Header/>
-            <div className={"App_box"}>
+            <div className={"Schedule_container"}>
                 <Aside/>
-                <div className={"Main"}>
-                    <div className={"title"}>
+                <div className={"Schedule_contents"}>
+                    <div className={"Schedule_title"}>
                         <div className={"Schedule_box"}>
                             <span><h1>금융 일정 관리</h1><br/>
                                 <p>지출 · 수입을 기록하여, 정기적으로 관리해보세요 !</p></span>
