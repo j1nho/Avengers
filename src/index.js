@@ -11,8 +11,9 @@ import Budget from "./pages/Budget";
 import Profile from "./pages/Profile";
 import Save from "./pages/Save";
 import Home from "./pages/Home";
+import Intro from "./pages/Intro";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Budget />
+    <Intro />
 );
