@@ -8,8 +8,8 @@
 /* Category_container */
 .Category_container {
     width: 100%;
-    height: 90%;
-    display: flex;
+    height: 100%;
+    padding: 110px 0 0 270px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -17,7 +17,7 @@
 
 /* Category_contents */
 .Category_contents {
-    width: 85%;
+    width: 100%;
     height: 100%;
 }
 .Category_contents ul {

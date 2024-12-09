@@ -6,8 +6,8 @@ const Category = () => {
     return (
         <div className={"CategoryPage"}>
             <Header/>
+            <Aside/>
             <div className="Category_container">
-                <Aside/>
                 <div className={"Category_contents"}>
                     <div className={"Category_title"}>
                         <h1>카테고리별 내역</h1>

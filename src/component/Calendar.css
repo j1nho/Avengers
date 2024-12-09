@@ -1,7 +1,8 @@
 /* Calendar.css */
 .calendar {
-    width: 70%;
-    margin: 100px auto;
+    width: 60%;
+    height: 80%;
+    margin: 10px auto;
     font-family: Arial, sans-serif;
     background: white;
     border-radius: 10px;
@@ -41,6 +42,11 @@
 }
 
 .calendar-header h2 {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+}
+.calendar-header h3 {
     font-size: 28px;
     font-weight: bold;
     margin: 0;

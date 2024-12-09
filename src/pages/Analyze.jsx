@@ -4,16 +4,16 @@ import './Analyze.css'
 
 const Analyze = () => {
     return (
-        <div>
+        <div className={"Analyze_wrap"}>
             <Header/>
-            <div className={"App_box"}>
-                <Aside/>
-                <div className={"analyze_container"}>
-                    <div className={"title"}>
+            <Aside/>
+            <div className={"Analyze_container"}>
+                <div className={"Analyze_contents"}>
+                    <div className={"Analyze_title"}>
                         <h1>12월 지출 분석</h1>
                     </div>
-                    <div className={"analyze_contentsBox"}>
-                        <div className={"analyze_contents"}>
+                    <div className={"Analyze_info"}>
+                        <div className={"Analyze_infoContents"}>
                             <div>
                                 <h3>이번 달 총 지출</h3>
                             </div>
@@ -24,8 +24,8 @@ const Analyze = () => {
                                 <h3>최근 3개월 지출 합계</h3>
                             </div>
                         </div>
-                        <div className={"analyze_contents2"}>
-                            <div className={"analyze_contents3"}>
+                        <div className={"Analyze_infoContents2"}>
+                            <div className={"Analyze_contents01"}>
                                 <div>
                                     <h3>주간별 분석</h3>
                                 </div>
@@ -33,7 +33,7 @@ const Analyze = () => {
                                     <h3>이번 달 카테고리별 지출 분석</h3>
                                 </div>
                             </div>
-                            <div className={"analyze_contents4"}>
+                            <div className={"Analyze_contents02"}>
                                 <div>
                                     <h3>12월 고정 지출</h3>
                                 </div>

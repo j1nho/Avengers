@@ -6,8 +6,8 @@ const Schedule = () => {
     return (
         <div className={"SchedulePage"}>
             <Header/>
+            <Aside/>
             <div className={"Schedule_container"}>
-                <Aside/>
                 <div className={"Schedule_contents"}>
                     <div className={"Schedule_title"}>
                         <div className={"Schedule_titleBox"}>

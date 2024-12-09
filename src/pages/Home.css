@@ -1,41 +1,43 @@
 /* Home_wrap */
 .Home_wrap {
     width: 100%;
-    height: 100vh;
-
+    height: 100%;
 }
 
 /* Home_container*/
 .Home_container {
     width: 100%;
-    height: 90%;
+    height: 120%;
     display: flex;
 }
 
 /* Home_wrapper */
 .Home_wrapper {
-    width: 85%;
+    width: 100%;
     height: 100%;
+    padding: 110px 0 0 270px;
 }
 
 /* Home_Box */
 .Home_Box {
     width: 100%;
-    height: 50%;
+    height: 60%;
     max-width: 1400px;
     margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Home_contents */
 .Home_contents {
     width: 100%;
-    height: 60%;
+    height: 250px;
     display: flex;
     justify-content: space-around;
-    margin: 30px 0 0 0;
 }
 
-/* Home_infoBox */
+/* Home_infoBox 프로필 */
 .Home_infoBox {
     width: 30%;
     height: 100%;
@@ -46,17 +48,17 @@
     width: 35%;
 }
 
-/* .Home_infoBox(2) */
+/* .Home_infoBox(2) 우리의 자산 */
 .Home_infoBox:nth-of-type(2) h2 {
-    padding: 25px 0 0 35px;
+    padding: 25px 0 20px 35px;
     font-size: 20px;
 }
 .Home_infoBox:nth-of-type(2) h3 {
-    font-size: 25px;
+    font-size: 30px;
 }
 .Home_infoBox:nth-of-type(2) ul {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 .Home_infoBox:nth-of-type(2) ul li {
     padding: 5px;
@@ -65,14 +67,14 @@
     color: #ccc;
 }
 
-/* .Home_infoBox(3) */
+/* .Home_infoBox(3) 예산 */
 .Home_infoBox:nth-of-type(3) h2 {
     padding: 25px 0 0 35px;
     font-size: 20px;
 }
 .Home_infoBox:nth-of-type(3) ul {
     text-align: center;
-    padding: 25px 0 0 0;
+    padding: 30px 0 10px 0;
 }
 .Home_infoBox:nth-of-type(3) ul li {
     padding: 5px;
@@ -94,7 +96,7 @@
 {/* Home_contents2 */}
 .Home_contents2 {
     width: 100%;
-    height: 60%;
+    height: 250px;
     display: flex;
     justify-content: space-around;
     margin: 30px 0 0 0;
@@ -111,7 +113,7 @@
     width: 35%;
 }
 .Home_infoBox2 h2 {
-    padding: 25px 0 0 35px;
+    padding: 25px 0 10px 35px;
     font-size: 20px;
 }
 

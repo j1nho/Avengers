@@ -6,8 +6,8 @@ const Save = () => {
     return (
         <div className={"SavePage"}>
             <Header/>
+            <Aside/>
             <div className={"Save_container"}>
-                <Aside/>
                 <div className={"Save_contents"}>
                     <div className={"Save_title"}>
                         <h1>이번 달 모은 돈</h1>

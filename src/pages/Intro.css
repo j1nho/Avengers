@@ -1,214 +1,218 @@
-/*!* IntroPage *!*/
-/*.IntroPage {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background-color: #FFF7F7;*/
-/*}*/
+/* IntroPage */
+.IntroPage {
+    width: 100%;
+    height: 700%;
+    background-color: #FFF7F7;
+}
 
-/*!* IntroContainer *!*/
-/*.IntroContainer {*/
-/*    width: 100%;*/
-/*    height: 100vw;*/
-/*}*/
+/* IntroContainer */
+.IntroContainer {
+    width: 100%;
+    height: 100vw;
+}
 
-/*!* IntroContent_1 *!*/
-/*.IntroContent_1 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    height: 55%;*/
-/*    margin: auto;*/
-/*    display: flex;*/
-/*}*/
-/*.IntroContent_1 div {*/
-/*    margin: auto;*/
-/*}*/
-/*.IntroContent_1 div h1 {*/
-/*    font-size: 40px;*/
-/*    font-weight: bold;*/
-/*}*/
-/*.IntroContent_1 div:nth-of-type(1) img {*/
-/*    width: 108px;*/
-/*    height: 58px;*/
-/*    object-fit: cover;*/
-/*    margin: 40px 0 0 200px;*/
-/*}*/
-/*.IntroContent_1 div:nth-of-type(2) img {*/
-/*    width: 600px;*/
-/*    object-fit: cover;*/
-/*}*/
+/* IntroContent_1 */
+.IntroContent_1 {
+    width: 100%;
+    max-width: 1400px;
+    height: 55%;
+    margin: auto;
+    display: flex;
+}
+.IntroContent_1 div {
+    margin: auto;
+}
+.IntroContent_1 div h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+.IntroContent_1 div:nth-of-type(1) img {
+    width: 108px;
+    height: 58px;
+    object-fit: cover;
+    margin: 40px 0 0 200px;
+}
+.IntroContent_1 div:nth-of-type(2) img {
+    width: 600px;
+    object-fit: cover;
+}
 
-/*!* IntroContent_2 *!*/
-/*.IntroContent_2 div h1 {*/
-/*    font-size: 40px;*/
-/*    font-weight: bold;*/
-/*    text-align: center;*/
-/*}*/
-/*.IntroContent_2 div p {*/
-/*    margin-top: 40px;*/
-/*    font-size: 20px;*/
-/*    font-weight: bold;*/
-/*    text-align: center;*/
-/*    color: #777777;*/
-/*}*/
+/* IntroContent_2 */
+.IntroContent_2 div h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.IntroContent_2 div p {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #777777;
+}
 
-/*!* IntroContent_3 *!*/
-/*.IntroContent_3 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    height: 40%;*/
-/*    margin: 100px auto;*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-/*.IntroContent_3 div:nth-of-type(1) img {*/
-/*    width: 600px;*/
-/*    object-fit: cover;*/
-/*}*/
-/*.IntroContent_3 div:nth-of-type(2) img {*/
-/*    width: 350px;*/
-/*    object-fit: cover;*/
-/*    padding-top: 110px;*/
-/*}*/
+/* IntroContent_3 */
+.IntroContent_3 {
+    width: 100%;
+    max-width: 1400px;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.IntroContent_3 div:nth-of-type(1) img {
+    width: 600px;
+    object-fit: cover;
+    margin-top: 70px;
+}
+.IntroContent_3 div:nth-of-type(2) img {
+    width: 350px;
+    object-fit: cover;
+    padding-top: 110px;
+    margin-top: 70px;
+}
 
-/*!* IntroContent_4 *!*/
-/*.IntroContent_4 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*}*/
-/*.IntroContent_4 div h1 {*/
-/*    font-size: 50px;*/
-/*    font-weight: bold;*/
-/*    text-align: center;*/
-/*}*/
+/* IntroContent_4 */
+.IntroContent_4 {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.IntroContent_4 div h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
 
-/*!* IntroContent_5 *!*/
-/*.IntroContent_5 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    height: 50%;*/
-/*    margin: auto;*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-/*.IntroContent_5 div {*/
-/*    margin: auto;*/
-/*}*/
-/*.IntroContent_5 div h1 {*/
-/*    font-size: 35px;*/
-/*    font-weight: bold;*/
-/*}*/
+}
 
-/*!* IntroContent_6*!*/
-/*.IntroContent_6 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    height: 50%;*/
-/*    margin: auto;*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-/*.IntroContent_6 div {*/
-/*    margin: auto;*/
-/*}*/
-/*.IntroContent_6 div:nth-of-type(2) h1 {*/
-/*    font-size: 35px;*/
-/*    font-weight: bold;*/
-/*    text-align: center;*/
-/*}*/
-/*.IntroContent_6 div:nth-of-type(2) p {*/
-/*    font-size: 20px;*/
-/*    font-weight: bold;*/
-/*    color: #777777;*/
-/*    text-align: center;*/
-/*    margin-top: 30px;*/
-/*}*/
+/* IntroContent_5 */
+.IntroContent_5 {
+    width: 100%;
+    max-width: 1400px;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.IntroContent_5 div {
+    margin: auto;
+}
+.IntroContent_5 div h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
 
-/*!* IntroContent_7 *!*/
-/*.IntroContent_7 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    margin: auto;*/
-/*}*/
-/*.IntroContent_7 div h1 {*/
-/*    font-size: 40px;*/
-/*    font-weight: bold;*/
-/*    text-align: center;*/
-/*}*/
+/* IntroContent_6*/
+.IntroContent_6 {
+    width: 100%;
+    max-width: 1400px;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.IntroContent_6 div {
+    margin: auto;
+}
+.IntroContent_6 div:nth-of-type(2) h1 {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+.IntroContent_6 div:nth-of-type(2) p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #777777;
+    text-align: center;
+    margin-top: 30px;
+}
 
-/*!* IntroContent_8 *!*/
-/*.IntroContent_8 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    height: 50%;*/
-/*    margin: auto;*/
-/*    display: flex;*/
-/*}*/
-/*.IntroContent_8 div {*/
-/*    margin: auto;*/
-/*}*/
-/*.IntroContent_8 div:nth-of-type(2) p {*/
-/*    padding-right: 50px;*/
-/*    font-size: 20px;*/
-/*    font-weight: bold;*/
-/*    color: #777777;*/
-/*}*/
+/* IntroContent_7 */
+.IntroContent_7 {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.IntroContent_7 div h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
 
-/*!* IntroContent_9 *!*/
-/*.IntroContent_9 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    margin: auto;*/
-/*}*/
-/*.IntroContent_9 div h1 {*/
-/*    font-size: 50px;*/
-/*    font-weight: bold;*/
-/*    margin-top: 50px;*/
-/*    text-align: center;*/
-/*}*/
-/*.IntroContent_9 div h2 {*/
-/*    font-size: 40px;*/
-/*    font-weight: bold;*/
-/*    margin-top: 30px;*/
-/*    text-align: center;*/
-/*}*/
-/*.IntroContent_9 div p {*/
-/*    font-size: 20px;*/
-/*    font-weight: bold;*/
-/*    color: #777777;*/
-/*    margin-top: 30px;*/
-/*    text-align: center;*/
-/*}*/
+/* IntroContent_8 */
+.IntroContent_8 {
+    width: 100%;
+    max-width: 1400px;
+    height: 50%;
+    margin: auto;
+    display: flex;
+}
+.IntroContent_8 div {
+    margin: auto;
+}
+.IntroContent_8 div:nth-of-type(2) p {
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #777777;
+}
 
-/*!* IntroContent_10 *!*/
-/*.IntroContent_10 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    height: 50%;*/
-/*    margin: auto;*/
-/*    display: flex;*/
-/*}*/
-/*.IntroContent_10 div {*/
-/*    margin: auto;*/
-/*}*/
+/* IntroContent_9 */
+.IntroContent_9 {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.IntroContent_9 div h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+}
+.IntroContent_9 div h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+}
+.IntroContent_9 div p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #777777;
+    margin-top: 30px;
+    text-align: center;
+}
 
-/*!* IntroButton *!*/
-/*.IntroContent_11 {*/
-/*    width: 100%;*/
-/*    max-width: 1400px;*/
-/*    height: 20%;*/
-/*    margin: auto;*/
-/*}*/
-/*.IntroButton {*/
-/*    text-align: center;*/
-/*}*/
-/*.IntroButton button {*/
-/*    width: 1000px;*/
-/*    height: 80px;*/
-/*    border: none;*/
-/*    border-radius: 10px;*/
-/*    background-color: #E87D7D;*/
-/*    color: #ffffff;*/
-/*    font-size: 30px;*/
-/*    font-weight: bold;*/
-/*    box-shadow: 0 4px 2px rgba(164, 164, 164, 0.4);*/
-/*}*/
+/* IntroContent_10 */
+.IntroContent_10 {
+    width: 100%;
+    max-width: 1400px;
+    height: 50%;
+    margin: auto;
+    display: flex;
+}
+.IntroContent_10 div {
+    margin: auto;
+}
+
+/* IntroButton */
+.IntroContent_11 {
+    width: 100%;
+    max-width: 1400px;
+    height: 20%;
+    margin: auto;
+}
+.IntroButton {
+    text-align: center;
+}
+.IntroButton button {
+    width: 1000px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    background-color: #E87D7D;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 2px rgba(164, 164, 164, 0.4);
+}

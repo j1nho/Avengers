@@ -7,13 +7,13 @@
 /* Profile_container */
 .Profile_container {
     width: 100%;
-    height: 90%;
-    display: flex;
+    height: 100%;
+    padding: 110px 0 0 270px;
 }
 
 /* Profile_contents */
 .Profile_contents {
-    width: 85%;
+    width: 100%;
     height: 100%;
 }
 
@@ -21,10 +21,12 @@
 .Profile_title {
     width: 95%;
     height: 20%;
-    display: flex;
-    align-items: center;
     margin: auto;
     border-bottom: 1px solid #aaa;
+    align-content: center;
+}
+.Profile_title h1 {
+    font-size: 40px;
 }
 
 /* Profile_setting */

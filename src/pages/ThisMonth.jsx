@@ -7,8 +7,8 @@ const ThisMonth = () => {
     return (
         <div className={"ThisMonthPage"}>
             <Header/>
+            <Aside/>
             <div className={"ThisMonth_container"}>
-                <Aside/>
                 <Calendar/> {/* 수정 필요. */}
             </div>
         </div>

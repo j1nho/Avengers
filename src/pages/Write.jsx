@@ -6,8 +6,8 @@ const Write = () => {
     return (
         <div className={"WritePage"}>
             <Header/>
+            <Aside/>
             <div className="Write_container">
-                <Aside/>
                 <div className={"Write_contents"}>
                     <div className={"Write_title"}>
                         <h1>가계부 작성</h1>

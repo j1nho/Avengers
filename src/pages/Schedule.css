@@ -8,12 +8,12 @@
 .Schedule_container {
     width: 100%;
     height: 100%;
-    display: flex;
+    padding: 110px 0 0 270px;
 }
 
 /* Schedule_contents */
 .Schedule_contents {
-    width: 85%;
+    width: 100%;
     height: 100%;
 }
 
@@ -46,7 +46,7 @@
 .Schedule_menu {
     display: flex;
     width: 100%;
-    height: 15%;
+    height: 11%;
 }
 .Schedule_menu li {
     padding: 30px 30px 0 30px;
@@ -64,11 +64,11 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    height: 75%;
+    height: 55%;
 }
 .box {
     width: 30%;
-    height: 90%;
+    height: 100%;
     padding: 25px 0 0 35px;
     background: rgba(232, 125, 125, 0.35);
     border-radius: 10px;

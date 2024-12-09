@@ -68,9 +68,12 @@ const Calendar = () => {
                 <button onClick={handlePrevMonth}>
                     <IoIosArrowBack />
                 </button>
-                <h2>December 2024</h2>
+                <div>
+                    <h3>2024</h3>
+                    <h2>December</h2>
+                </div>
                 <button onClick={handleNextMonth}>
-                    <IoIosArrowForward />
+                    <IoIosArrowForward/>
                 </button>
             </div>
             <div className="calendar-weekdays">
