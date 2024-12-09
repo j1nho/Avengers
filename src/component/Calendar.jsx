@@ -51,7 +51,7 @@ const Calendar = () => {
     };
 
     const addTransaction = (date, amount, description, category) => {
-        const finalAmount = category === '💰' ? Math.abs(amount) : -Math.abs(amount);
+        const finalAmount = category === '입금' ? Math.abs(amount) : -Math.abs(amount);
 
         setTransactions(prev => {
             const newTransactions = {
@@ -200,6 +200,7 @@ const Calendar = () => {
                     }}>
                         <select name="category" required>
                             <option value="선택">선택</option>
+                            <option value="숙소">🏟숙소</option>
                             <option value="쇼핑">🛒쇼핑</option>
                             <option value="교통">✈교통</option>
                             <option value="식비">🍙식비</option>
