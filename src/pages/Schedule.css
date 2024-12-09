@@ -7,7 +7,7 @@
 /* Schedule_container */
 .Schedule_container {
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: flex;
 }
 
@@ -26,14 +26,18 @@
     border-bottom: 1px solid #aaa;
 }
 
-/* Schedule_box */
-.Schedule_box h1 {
-    padding: 75px 0 0 70px;
+/* Schedule_titleBox */
+.Schedule_titleBox {
+    width: 100%;
+    height: 100%;
+}
+.Schedule_titleBox h1 {
+    padding: 55px 0 10px 70px;
     font-size: 40px;
     border: none;
 }
-.Schedule_box p {
-    padding: 0 0 20px 70px;
+.Schedule_titleBox p {
+    padding: 0 0 0 70px;
     color: #aaa;
     font-size: 18px;
 }
@@ -42,10 +46,10 @@
 .Schedule_menu {
     display: flex;
     width: 100%;
-    height: 11%;
+    height: 15%;
 }
 .Schedule_menu li {
-    padding: 30px 30px 10px 30px;
+    padding: 30px 30px 0 30px;
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 25px;
@@ -60,7 +64,7 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    height: 67%;
+    height: 75%;
 }
 .box {
     width: 30%;

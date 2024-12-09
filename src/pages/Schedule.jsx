@@ -1,4 +1,4 @@
-        import Header from "../component/Header";
+import Header from "../component/Header";
 import Aside from "../component/Aside";
 import './Schedule.css'
 
@@ -10,9 +10,9 @@ const Schedule = () => {
                 <Aside/>
                 <div className={"Schedule_contents"}>
                     <div className={"Schedule_title"}>
-                        <div className={"Schedule_box"}>
-                            <span><h1>금융 일정 관리</h1><br/>
-                                <p>지출 · 수입을 기록하여, 정기적으로 관리해보세요 !</p></span>
+                        <div className={"Schedule_titleBox"}>
+                            <h1>금융 일정 관리</h1>
+                            <p>지출 · 수입을 기록하여, 정기적으로 관리해보세요 !</p>
                         </div>
                     </div>
                     <ul className={"Schedule_menu"}>
