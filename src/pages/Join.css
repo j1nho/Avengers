@@ -1,35 +1,35 @@
 /* LoginPage */
-.LoginPage {
+.JoinPage {
     width: 100%;
     height: 100%;
     text-align: center;
     padding: 200px;
 }
 
-.Login_box {
+.Join_box {
     width: 70%;
     height: 60%;
     margin: auto;
     text-align: center;
 }
 
-.Login_box h1 {
+.Join_box h1 {
     padding: 30px;
     font-size: 40px;
     font-weight: 800;
 }
 
-.LoginBox {
+.JoinBox {
     display: block;
     justify-items: center;
 }
 
-.LoginBox p {
+.JoinBox p {
     font-size: 20px;
     color: #777777;
 }
 
-.LoginBox input {
+.JoinBox input {
     width: 300px;
     height: 35px;
     margin-top: 10px;
@@ -43,33 +43,33 @@
 
 .passwordBox {
     text-align: left;
-    padding: 30px 0 40px 0;
+    padding: 30px 0;
+}
+.passwordBox .password {
+    margin-bottom: 10px;
+}
+.passwordBox span {
+    color: #777777;
+
+}
+.nameBox {
+    text-align: left;
 }
 
 .mfeo {
     width: 108px;
     height: 58px;
 }
-
-.login button {
+.join {
+    margin-top: 40px;
+}
+.join button {
     background-color: #E87D7D;
     width: 300px;
     height: 40px;
     border-radius: 5px;
     border: none;
     color: #fff;
-    margin: 10px;
-    font-size: 20px;
-}
-
-.join button {
-    background-color: #EFA0A2;
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    margin: 10px;
     font-size: 20px;
 }
 
