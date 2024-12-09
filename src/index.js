@@ -11,9 +11,10 @@ import './index.css';
 // import Profile from "./pages/Profile";
 // import Save from "./pages/Save";
 // import Home from "./pages/Home";
-import Intro from "./pages/Intro";
+// import Intro from "./pages/Intro";
+import Calendar from "./component/Calendar";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Intro />
+    <Calendar />
 );
