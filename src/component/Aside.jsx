@@ -8,9 +8,10 @@ import {CalendarMonth} from "@mui/icons-material";
 import {Settings} from "@mui/icons-material";
 import {Home} from "@mui/icons-material";
 import {useEffect, useRef, useState} from "react";
+import {Link} from "react-router-dom";
 
 
-const Aside = () => {
+const Aside = ({handleLogout}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [height, setHeight] = useState(0);
     const submenuRef = useRef(null);
@@ -24,18 +25,19 @@ const Aside = () => {
     return (
         <div className={"menu_container"}>
             <ul className={"menu"}>
-                <li><Home style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><a href={"#"}>홈</a></li>
-                <li><MdEditSquare style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><a href={"#"}>가계부
-                    작성</a></li>
-                <li><BarChart style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><a href={"#"}>주간별/월간별
-                    분석</a></li>
-                <li><Paid style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><a href={"#"}>예산</a></li>
+                <li><Home style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/">홈</Link></li>
+                <li><MdEditSquare style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/write">가계부
+                    작성</Link></li>
+                <li><BarChart style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/analyze">주간별/월간별
+                    분석</Link></li>
+                <li><Paid style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link
+                    to="/budget">예산</Link></li>
                 <li
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    <div><CreditCard style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><a
-                        href={"#"}>내역</a></div>
+                    <div><CreditCard style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><span>내역</span>
+                    </div>
                     <ul
                         ref={submenuRef}
                         className="submenu"
@@ -45,17 +47,17 @@ const Aside = () => {
                             height: `${height}px`
                         }}
                     >
-                        <li><a href={"#"}>이번 달 내역</a></li>
-                        <li><a href={"#"}>카테고리별 내역</a></li>
+                        <li><Link to="/thisMonth">이번 달 내역</Link></li>
+                        <li><Link to="/category">카테고리별 내역</Link></li>
                     </ul>
                 </li>
-                <li><CalendarMonth style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><a href={"#"}>금융
-                    일정</a></li>
-                <li><Settings style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><a href={"#"}>프로필
-                    설정</a></li>
+                <li><CalendarMonth style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link
+                    to="/schedule">금융 일정</Link></li>
+                <li><Settings style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/profile">프로필
+                    설정</Link></li>
             </ul>
-            <div className={"logout"}>
-                <LogoutIcon style={{color: '#E87D7D', marginRight: "10px"}}/><a href={"#"}>로그아웃</a>
+            <div className={"logout"} onClick={handleLogout}>
+                <LogoutIcon style={{color: '#E87D7D', marginRight: "10px"}}/><Link to="/login">로그아웃</Link>
             </div>
         </div>
     )

@@ -12,6 +12,14 @@ import {createUserWithEmailAndPassword, updateProfile, getAuth, signInWithEmailA
 import app from './js/firebaseApp'
 import {createContext, useEffect, useState} from "react";
 import ProtectedRoute from "./js/ProtectedRoute";
+import Analyze from "./pages/Analyze";
+import Budget from "./pages/Budget";
+import Category from "./pages/Category";
+import Profile from "./pages/Profile";
+import Save from "./pages/Save";
+import Schedule from "./pages/Schedule";
+import ThisMonth from "./pages/ThisMonth";
+import Write from "./pages/Write";
 
 export const AuthContext = createContext();
 
@@ -96,13 +104,19 @@ function App() {
 
     return (
         <div className="App">
-            <div>
-            </div>
             <AuthContext.Provider value={{user, isAuthenticated}}>
                 <Routes>
                     <Route path={'/'} element={<Home/>}/>
                     <Route path={'/join'} element={<Join onJoin={onJoin}/>}/>
                     <Route path={'/login'} element={<Login onLogin={onLogin}/>}/>
+                    <Route path={'/analyze'} element={<Analyze/>}/>
+                    <Route path={'/budget'} element={<Budget/>}/>
+                    <Route path={'/category'} element={<Category/>}/>
+                    <Route path={'/profile'} element={<Profile/>}/>
+                    <Route path={'/save'} element={<Save/>}/>
+                    <Route path={'/schedule'} element={<Schedule/>}/>
+                    <Route path={'/thisMonth'} element={<ThisMonth/>}/>
+                    <Route path={'/write'} element={<Write/>}/>
                 </Routes>
             </AuthContext.Provider>
         </div>
