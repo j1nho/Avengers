@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // useNavigate 임포트
 import AOS from "aos";
 import "aos/dist/aos.css"; // AOS 스타일 불러오기
 import Header from "../component/Header";
@@ -13,6 +14,7 @@ import Intro_6 from '../images/Intro_6.png';
 import Intro_7 from '../images/Intro_7.png';
 
 const Intro = () => {
+    const navigate = useNavigate(); // useNavigate 훅 호출
     // AOS 초기화
     useEffect(() => {
         AOS.init({
@@ -22,6 +24,11 @@ const Intro = () => {
             once: true, // 스크롤 한 번만 애니메이션 실행
         });
     }, []);
+    // 시작하기 버튼 클릭 이벤트 핸들러
+    const handleStartClick = () => {
+        console.log('Button clicked, navigating to /login');
+        navigate('/login');
+    };
     return (
         <div className={"IntroPage"}>
             <Header/>
@@ -102,7 +109,7 @@ const Intro = () => {
                 </div>
                 <div className={"IntroContent_11"}>
                     <div className={"IntroButton"}>
-                        <button>시작하기</button>
+                        <button onClick={handleStartClick}>시작하기</button>
                     </div>
                 </div>
 

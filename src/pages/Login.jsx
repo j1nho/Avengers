@@ -1,11 +1,17 @@
 import logo from '../images/logo.png'
 import './Login.css'
 import {useState} from "react";
+import { useNavigate } from "react-router-dom"; // useNavigate 임포트
 
 const Login = ({onLogin}) => {
+    const navigate = useNavigate(); // useNavigate 훅 호출
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleJoinClick = () => {
+        console.log('Button clicked, navigating to /join');
+        navigate('/join');
+    };
     return (
         <div className={"LoginPage"}>
             <img src={logo} className={"mfeo"} alt="logo"/>
@@ -24,7 +30,7 @@ const Login = ({onLogin}) => {
                         <button onClick={() => onLogin(email, password)}>Log In</button>
                     </div>
                     <div className={"join"}>
-                        <button>Join</button>
+                        <button onClick={handleJoinClick}>Join</button>
                     </div>
                 </div>
             </div>
