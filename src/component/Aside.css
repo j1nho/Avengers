@@ -41,7 +41,9 @@
 
 .menu li:nth-of-type(4) {
     display: inline-block;
-    flex-direction: column;
+}
+.menu li:nth-of-type(5) {
+    padding: 35px 0 0 50px;
 }
 
 /* submenu */
