@@ -1,15 +1,17 @@
-import './Modal.css'
+import React from 'react';
+import './Modal.css'; // 스타일링을 위한 CSS 파일
+import '../App'
 
-function SuccessModal({ onClose }) {
+function Modal({ title, message, onClose }) {
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-                <h2>회원 가입 성공 !</h2>
-                <p>로그인 페이지로 이동 합니다.</p>
+                <h2>{title}</h2>
+                <p>{message}</p>
                 <button onClick={onClose}>확인</button>
             </div>
         </div>
     );
 }
 
-export default SuccessModal;
+export default Modal;
