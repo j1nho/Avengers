@@ -36,66 +36,68 @@ const Intro = () => {
                 <div className="IntroContent_1" data-aos="fade-up">
                     <div>
                         <h1>커플을 위한 가계부,</h1>
+                        <p>함께 만드는 행복한 소비 계획 !</p>
                         <img src={logo} alt="logo" />
                     </div>
                     <div>
                         <img src={Intro_1} alt="intro" />
                     </div>
                 </div>
-                <div className={"IntroContent_2"}>
+                <div className="IntroContent_2" data-aos="fade-down">
                     <div>
-                        <h1 data-aos="fade-down">각자의 이름이나 별명을 입력하고,<br/>
+                        <h1>각자의 이름이나 별명을 입력하고,<br/>
                             함께 사용할 비밀번호를 정해보세요!</h1>
-                        <p data-aos="fade-down">두 분 모두 동일한 계정으로 로그인해 데이터를 공유할 수 있어요.</p>
+                        <p>두 분 모두 동일한 계정으로 로그인해 데이터를 공유할 수 있어요.</p>
                     </div>
                 </div>
                 <div className={"IntroContent_3"}>
-                    <div data-aos="fade-up">
+                    <div data-aos="fade-up-right">
                         <img src={Intro_2} alt="intro"/>
                     </div>
-                    <div data-aos="fade-up">
+                    <div data-aos="fade-up-left">
                         <img src={Intro_3} alt="intro"/>
                     </div>
                 </div>
                 <div className={"IntroContent_4"}>
                     <div data-aos="zoom-in">
-                        <h1>수입과 지출 관리는 이렇게 !</h1>
+                        <h1>커플의 모든 소비를 투명하게! 🛒</h1>
                     </div>
                 </div>
                 <div className={"IntroContent_5"}>
                     <div>
-                        <h1  data-aos="fade-up-right">더 스마트한 예산 관리 하기 💸</h1>
+                        <img src={Intro_4} alt="intro" data-aos="flip-up"/>
                     </div>
-                    <div>
-                        <img src={Intro_4} alt="intro" data-aos="fade-up-left" />
+                    <div data-aos="fade-left">
+                        <h1>‘분석’ 탭에서 소비 내역을<br/>
+                            한눈에 확인할 수 있어요.</h1>
+                        <h2>바 차트로 쉽게 이해할 수 있답니다. </h2>
+                        <p>💡 팁: 지난달과 비교하며 소비 패턴을 확인해보세요!</p>
                     </div>
                 </div>
                 <div className={"IntroContent_6"}>
                     <div>
-                        <img src={Intro_5} alt="intro" data-aos="fade-down-right" />
-                    </div>
-                    <div data-aos="fade-down-left">
-                        <h1>한 달 예산 목표를 입력해볼까요? 🎯</h1>
-                        <p> 예산을 설정하면 소비를<br/>
-                            효과적으로 관리할 수 있어요.</p>
+                        <img src={Intro_5} alt="intro" data-aos="zoom-in" />
                     </div>
                 </div>
                 <div className={"IntroContent_7"}>
-                    <div  data-aos="zoom-in-down">
-                        <h1>커플의 모든 소비를 투명하게! 🛒</h1>
+                    <div data-aos="fade-up">
+                        <h1>캘린더로 지출/수입 내역을<br/>
+                            한 눈에 확인해보세요 !</h1>
                     </div>
                 </div>
                 <div className={"IntroContent_8"}>
-                    <div>
-                        <img src={Intro_6} alt="intro" data-aos="zoom-in"/>
+                    <div data-aos="fade-up-right">
+                        <h1>매달 빠져나가는 고정비,<br/>
+                            챙기기 귀찮으셨죠? 📌</h1>
+                        <p>이제 고정 지출을 따로 등록해보세요.<br/>
+                            매달 자동 기록됩니다.</p>
                     </div>
                     <div>
-                        <p>바 차트와 원형 그래프로<br/>
-                            쉽게 이해할 수 있답니다. </p>
+                        <img src={Intro_6} alt="intro" data-aos="flip-right"/>
                     </div>
                 </div>
-                <div className="IntroContent_9" data-aos="zoom-out">
-                    <div>
+                <div className={"IntroContent_9"}>
+                    <div data-aos="zoom-in-down">
                         <h1>하루 1분만 투자! 💡</h1>
                         <h2>더 이상 복잡한 엑셀은 안녕~ 👋</h2>
                         <p>'가계부 작성' 버튼을 눌러 금액, 카테고리, 날짜를<br/>
@@ -104,12 +106,17 @@ const Intro = () => {
                 </div>
                 <div className={"IntroContent_10"}>
                     <div>
-                        <img src={Intro_7} alt="intro" data-aos="zoom-in" />
+                        <img src={Intro_7} alt="intro" data-aos="zoom-out" />
                     </div>
                 </div>
                 <div className={"IntroContent_11"}>
+                    <div>
+                        <h1 data-aos="fade-down">두 분의 행복한 소비와 저축 여정을 시작해 보세요. 🚀</h1>
+                    </div>
+                </div>
+                <div className={"IntroContent_12"}>
                     <div className={"IntroButton"}>
-                        <button onClick={handleStartClick}>시작하기</button>
+                    <button onClick={handleStartClick}>시작하기</button>
                     </div>
                 </div>
 
