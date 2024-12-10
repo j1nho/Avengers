@@ -64,7 +64,7 @@ function App() {
             navigate('/login')
 
         } catch (error) {
-            alert('회원 가입 실패')
+            // alert('회원 가입 실패')
             const errorCode = error.code;
             const errorMessage = error.message;
             console.log(errorCode, errorMessage);

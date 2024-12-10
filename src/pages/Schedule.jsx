@@ -3,6 +3,11 @@ import Aside from "../component/Aside";
 import './Schedule.css'
 
 const Schedule = () => {
+
+    const popup =() => {
+        alert('추후 제작 예정입니다.')
+    }
+
     return (
         <div className={"SchedulePage"}>
             <Header/>
@@ -15,7 +20,7 @@ const Schedule = () => {
                     </div>
                     <ul className={"Schedule_menu"}>
                         <li>금융 일정 추가</li>
-                        <li>금융 일정 수정</li>
+                        <li onClick={popup}>금융 일정 수정</li>
                     </ul>
                     <div className={"contents_box"}>
                         <div className={"box"}>

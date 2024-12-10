@@ -46,6 +46,7 @@
     font-weight: 500;
     font-size: 25px;
     margin-left: 150px;
+    cursor: pointer;
 }
 .Schedule_menu li:first-child {
     border-bottom: 5px solid #E87D7D;

@@ -37,6 +37,15 @@
     display: flex;
 }
 
+/* ProfileClick */
+.ProfileClick {
+    cursor: pointer;
+}
+.ProfileClick:hover {
+    scale: 0.99;
+    background-color: rgba(243, 225, 225, 0.51);
+}
+
 .Profile_img, .Profile_text {
     width: 50%;
     height: 100%;

@@ -4,6 +4,11 @@ import Aside from "../component/Aside";
 import {PhotoCamera} from "@mui/icons-material";
 
 const Profile = () => {
+
+    const popup =() => {
+        alert('추후 제작 예정입니다.')
+    }
+
     return (
         <div className="ProfilePage">
             <Header/>
@@ -15,7 +20,7 @@ const Profile = () => {
                     </div>
                     <div className={"Profile_setting"}>
                         <div className={"Profile_img"}>
-                            <div>
+                            <div className={"ProfileClick"} onClick={popup}>
                                 <PhotoCamera style={{fontSize: '60px', color: '#E87D7D'}}/>
                                 <p>프로필 사진을 추가해보세요.</p>
                             </div>
