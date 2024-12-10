@@ -16,19 +16,19 @@ const Join = ({onJoin}) => {
                 <div className={"JoinBox"}>
                     <div className={"emailBox"}>
                         <p>E-mail</p>
-                        <input type={'email'} className={'email'} onChange={event => setEmail(event.target.value)}/>
+                        <input type={"email"} className={'email'} value={email} onChange={event => setEmail(event.target.value)}/>
                     </div>
                     <div className={"passwordBox"}>
                         <p>PassWord</p>
-                        <input type={"text"} className={"password" } onChange={event => setPassword(event.target.value)}/><br/>
+                        <input type={"text"} className={"password" } value={password} onChange={event => setPassword(event.target.value)}/><br/>
                         <span>비밀번호는 최소 6자리</span>
                     </div>
                     <div className={"nameBox"}>
                         <p>Name</p>
-                        <input type={"text"} className={"name"} onChange={e => setName(e.target.value)}/>
+                        <input type={"text"} className={"name"} value={name} onChange={e => setName(e.target.value)}/>
                     </div>
                     <div className={"join"}>
-                        <button onClick={onJoin(email, password, name)}>Join</button>
+                        <button onClick={() => onJoin(email, password, name)}>Join</button>
                     </div>
                 </div>
             </div>

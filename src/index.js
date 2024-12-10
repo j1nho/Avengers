@@ -8,6 +8,6 @@ import Intro from "./pages/Intro";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <Intro/>
+        <App/>
     </BrowserRouter>
 );
