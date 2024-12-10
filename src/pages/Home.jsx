@@ -3,6 +3,8 @@ import Header from "../component/Header";
 import Aside from "../component/Aside";
 import Calendar from "../component/Calendar";
 import profileImg from "../images/profile.png"
+import {Link} from "react-router-dom";
+import {ArrowRightRounded} from '@mui/icons-material'
 
 const Home = () => {
     return (
@@ -15,7 +17,7 @@ const Home = () => {
                         <div className={"Home_profileBox"}>
                             <div className={"Home_profile"}>
                                 <div className={"Home_profileImg"}>
-                                    <img src={profileImg}/>
+                                    <img src={profileImg} alt={'profileImg'}/>
                                 </div><br/>
                                 <h3>User</h3><br/>
                                 <p><span>함께 관리한지 </span>368일째❤</p><br/>
@@ -32,7 +34,12 @@ const Home = () => {
                                     </ul>
                                 </div>
                                 <div className={"Home_infoBox"}>
-                                    <h2>이번 달 지출</h2>
+                                    <div className={"thisMonthTitle"}>
+                                        <h2>이번 달 지출</h2>
+                                        <div className={"more"}>
+                                            <Link to={'/thisMonth'}>더보기<ArrowRightRounded/></Link>
+                                        </div>
+                                    </div>
                                     <div className={"circle_box"}>
                                         <div className={"circle1"}>350,000</div>
                                     </div>
