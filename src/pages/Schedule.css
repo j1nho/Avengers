@@ -20,24 +20,16 @@
 /* Schedule_title */
 .Schedule_title {
     width: 95%;
-    height: 20%;
+    height: 168px;
     margin: auto;
-    align-items: center;
     border-bottom: 1px solid #aaa;
 }
-
-/* Schedule_titleBox */
-.Schedule_titleBox {
-    width: 100%;
-    height: 100%;
-}
-.Schedule_titleBox h1 {
-    padding: 55px 0 10px 70px;
+.Schedule_title h1 {
+    padding: 75px 0 10px 70px;
     font-size: 40px;
-    border: none;
 }
-.Schedule_titleBox p {
-    padding: 0 0 0 70px;
+.Schedule_title p {
+    padding-left: 70px;
     color: #aaa;
     font-size: 18px;
 }
@@ -74,6 +66,9 @@
     border-radius: 10px;
 }
 .box:nth-of-type(2), .box:nth-of-type(3) {
+    width: 30%;
+    height: 462px;
+    padding: 25px 0 0 35px;
     background: none;
     border: 1px solid #E87D7D;
     border-radius: 10px;

@@ -2,17 +2,13 @@
 .calendar {
     width: 60%;
     height: 80%;
-    margin: 10px auto;
+    margin: 70px auto;
     background: white;
     border-radius: 10px;
     font-family: "Pragati Narrow";
 }
 
 /* calendar-header */
-.calendar-header {
-    padding: 20px;
-}
-
 .calendar-header button {
     width: 40px;
     height: 40px;
@@ -104,9 +100,9 @@
     border: 1px solid #eee;
 }
 
-.calendar-day.empty {
-    background: #f9f9f9;
-}
+/*.calendar-day.empty {*/
+/*    background: #f9f9f9;*/
+/*}*/
 
 /* day-number */
 .day-number {

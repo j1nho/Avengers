@@ -10,10 +10,8 @@ const Schedule = () => {
             <div className={"Schedule_container"}>
                 <div className={"Schedule_contents"}>
                     <div className={"Schedule_title"}>
-                        <div className={"Schedule_titleBox"}>
-                            <h1>금융 일정 관리</h1>
-                            <p>지출 · 수입을 기록하여, 정기적으로 관리해보세요 !</p>
-                        </div>
+                        <h1>금융 일정 관리</h1>
+                        <p>지출 · 수입을 기록하여, 정기적으로 관리해보세요 !</p>
                     </div>
                     <ul className={"Schedule_menu"}>
                         <li>금융 일정 추가</li>

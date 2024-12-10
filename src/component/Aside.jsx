@@ -2,7 +2,6 @@ import './Aside.css'
 import LogoutIcon from '@mui/icons-material/Logout';
 import {MdEditSquare} from "react-icons/md";
 import {BarChart} from "@mui/icons-material";
-import {Paid} from "@mui/icons-material";
 import {CreditCard} from "@mui/icons-material";
 import {CalendarMonth} from "@mui/icons-material";
 import {Settings} from "@mui/icons-material";
@@ -30,8 +29,6 @@ const Aside = ({handleLogout}) => {
                     작성</Link></li>
                 <li><BarChart style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/analyze">주간별/월간별
                     분석</Link></li>
-                <li><Paid style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link
-                    to="/budget">예산</Link></li>
                 <li
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}

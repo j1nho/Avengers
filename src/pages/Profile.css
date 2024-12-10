@@ -20,20 +20,20 @@
 /* Profile_title */
 .Profile_title {
     width: 95%;
-    height: 20%;
     margin: auto;
-    border-bottom: 1px solid #aaa;
-    align-content: center;
 }
 .Profile_title h1 {
+    padding: 75px 0 45px 70px;
     font-size: 40px;
+    border-bottom: 1px solid #aaa;
 }
 
 /* Profile_setting */
 .Profile_setting {
     width: 70%;
-    height: 60%;
+    height: 100%;
     margin: auto;
+    padding-top: 100px;
     display: flex;
 }
 

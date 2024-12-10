@@ -3,17 +3,16 @@ import './App.css';
 // import Aside from "./component/Aside";
 // import Home from "./pages/Home";
 // import Calendar from "./component/Calendar";
-import {Link, Route, Routes, useNavigate} from "react-router-dom";
+// import ProtectedRoute from "./js/ProtectedRoute";
+import {Route, Routes, useNavigate} from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Join from "./pages/Join";
 import {createUserWithEmailAndPassword, updateProfile, getAuth, signInWithEmailAndPassword,
-    onAuthStateChanged, signOut, updatePassword} from 'firebase/auth'
+    onAuthStateChanged} from 'firebase/auth'
 import app from './js/firebaseApp'
 import {createContext, useEffect, useState} from "react";
-import ProtectedRoute from "./js/ProtectedRoute";
 import Analyze from "./pages/Analyze";
-import Budget from "./pages/Budget";
 import Category from "./pages/Category";
 import Profile from "./pages/Profile";
 import Save from "./pages/Save";
@@ -21,7 +20,7 @@ import Schedule from "./pages/Schedule";
 import ThisMonth from "./pages/ThisMonth";
 import Write from "./pages/Write";
 
-export const AuthContext = createContext();
+export const AuthContext = createContext('');
 
 function App() {
     const auth = getAuth(app); // firebase 인증 객체
@@ -88,19 +87,19 @@ function App() {
             console.log(errorCode, errorMessage);
         }
     }
-    const handleLogout = async () => {
-        try {
-            await signOut(auth); // Firebase 로그아웃
-            setUser(null);
-            setIsAuthenticated(false);
-            navigate('/login');
-        } catch (error) {
-            alert('로그아웃 실패')
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage);
-        }
-    }
+    // const handleLogout = async () => {
+    //     try {
+    //         await signOut(auth); // Firebase 로그아웃
+    //         setUser(null);
+    //         setIsAuthenticated(false);
+    //         navigate('/login');
+    //     } catch (error) {
+    //         alert('로그아웃 실패')
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         console.log(errorCode, errorMessage);
+    //     }
+    // }
 
     return (
         <div className="App">
@@ -110,7 +109,6 @@ function App() {
                     <Route path={'/join'} element={<Join onJoin={onJoin}/>}/>
                     <Route path={'/login'} element={<Login onLogin={onLogin}/>}/>
                     <Route path={'/analyze'} element={<Analyze/>}/>
-                    <Route path={'/budget'} element={<Budget/>}/>
                     <Route path={'/category'} element={<Category/>}/>
                     <Route path={'/profile'} element={<Profile/>}/>
                     <Route path={'/save'} element={<Save/>}/>

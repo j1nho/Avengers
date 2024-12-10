@@ -39,7 +39,7 @@
     width: 100%;
 }
 
-.menu li:nth-of-type(5) {
+.menu li:nth-of-type(4) {
     display: inline-block;
     flex-direction: column;
 }
