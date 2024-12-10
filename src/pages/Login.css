@@ -58,18 +58,16 @@
     border-radius: 5px;
     border: none;
     color: #fff;
-    margin: 10px;
     font-size: 20px;
 }
 
-.join button {
+.Login_box .join button {
     background-color: #EFA0A2;
     width: 300px;
     height: 40px;
     border-radius: 5px;
     border: none;
     color: #fff;
-    margin: 10px;
     font-size: 20px;
 }
 
