@@ -31,6 +31,8 @@
 /* Analyze_info */
 .Analyze_info {
     width: 100%;
+    max-width: 1400px;
+    margin: auto;
     height: 100%;
     padding: 30px;
 }
@@ -39,38 +41,17 @@
 .Analyze_infoContents {
     margin: 0 auto;
     width: 90%;
-    height: 45%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.Analyze_infoContents div {
-    width: 450px;
-    height: 330px;
-    border: 1px solid #E87D7D;
-    border-radius: 10px;
-}
-.Analyze_infoContents h3 {
-    font-size: 20px;
-    padding: 20px 0 0 30px;
-}
-
-/* Analyze_infoContents2 */
-.Analyze_infoContents2 {
-    margin: 0 auto;
-    width: 90%;
-    height: 60%;
+    height: 100%;
     display: flex;
 }
 
 /* Analyze_contents01 */
 .Analyze_contents01 {
-    width: 920px;
-    height: 500px;
+    display: block;
 }
 
 .Analyze_contents01 div {
-    width: 920px;
+    width: 800px;
     height: 250px;
     margin: 30px 10px 10px 12px;
     border: 1px solid #E87D7D;
@@ -86,9 +67,16 @@
     margin-top: 30px;
 }
 /* Analyze_contents02 */
-.Analyze_contents02 {
-    width: 450px;
-    height: 530px;
+.Analyze_contents02 div:first-of-type {
+    width: 350px;
+    height: 130px;
+    border: 1px solid #E87D7D;
+    border-radius: 10px;
+    margin: 30px 0 30px 34px;
+}
+.Analyze_contents02 div:nth-of-type(2) {
+    width: 350px;
+    height: 370px;
     border: 1px solid #E87D7D;
     border-radius: 10px;
     margin: 30px 0 30px 34px;

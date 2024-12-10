@@ -135,6 +135,19 @@
     padding: 25px 0 10px 35px;
     font-size: 20px;
 }
+.Home_infoBox2 .ScheduleMove {
+    text-align: right;
+    height: 25px;
+}
+.Home_infoBox2 .ScheduleMove a {
+    display: inline-block;
+    height: 25px;
+}
+
+.Home_Schedule {
+    width: 100%;
+    height: 60%;
+}
 
 /* -------------------------------- Home_contents2 ------------------------------ */
 

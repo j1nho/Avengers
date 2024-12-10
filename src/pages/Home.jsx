@@ -4,7 +4,7 @@ import Aside from "../component/Aside";
 import Calendar from "../component/Calendar";
 import profileImg from "../images/profile.png"
 import {Link} from "react-router-dom";
-import {ArrowRightRounded} from '@mui/icons-material'
+import {KeyboardArrowRight} from '@mui/icons-material'
 
 const Home = () => {
     return (
@@ -37,7 +37,7 @@ const Home = () => {
                                     <div className={"thisMonthTitle"}>
                                         <h2>이번 달 지출</h2>
                                         <div className={"more"}>
-                                            <Link to={'/thisMonth'}>더보기<ArrowRightRounded/></Link>
+                                            <Link to={'/thisMonth'}>더보기<KeyboardArrowRight/></Link>
                                         </div>
                                     </div>
                                     <div className={"circle_box"}>
@@ -48,6 +48,12 @@ const Home = () => {
                             <div className={"Home_contents2"}>
                                 <div className={"Home_infoBox2"}>
                                     <h2>우리의 금융 일정</h2>
+                                    <div className={'Home_Schedule'}>
+                                        {/* 기능 넣어야되는 공간,,? */}
+                                    </div>
+                                    <div className={'ScheduleMove'}>
+                                        <Link to={'/schedule'}>금융 일정 작성하러 가기<KeyboardArrowRight/></Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
