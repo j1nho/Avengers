@@ -88,6 +88,7 @@
 }
 
 /* GPT */
+
 .chart-container {
     padding: 20px;
     height: 100%;
@@ -100,23 +101,7 @@
     margin-top: 20px;
 }
 
-.fixed-expense-list {
-    padding: 20px;
-}
-
-.fixed-expense-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.fixed-expense-item span {
-    font-size: 16px;
-}
-
 /* 차트 크기 조절을 위한 스타일 */
 .Analyze_contents01 canvas {
     max-height: 180px !important;
 }
-
