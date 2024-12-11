@@ -4,6 +4,7 @@ import './App.css';
 // import Home from "./pages/Home";
 // import Calendar from "./component/Calendar";
 import {Link, Route, Routes, useNavigate} from "react-router-dom";
+import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Join from "./pages/Join";
@@ -19,7 +20,6 @@ import Save from "./pages/Save";
 import Schedule from "./pages/Schedule";
 import ThisMonth from "./pages/ThisMonth";
 import Write from "./pages/Write";
-import Intro from "./pages/Intro";
 import Modal from "./component/Modal";
 export const AuthContext = createContext();
 
@@ -106,10 +106,10 @@ function App() {
         <div className="App">
             <AuthContext.Provider value={{user, isAuthenticated}}>
                 <Routes>
-                    <Route path={"/intro"} element={<Intro />} />
+                    <Route path={"/"} element={<Intro />} />
                     <Route path={'/login'} element={<Login onLogin={onLogin}/>}/>
                     <Route path={'/join'} element={<Join onJoin={onJoin}/>}/>
-                    <Route path={'/'} element={<Home/>}/>
+                    <Route path={'/home'} element={<Home/>}/>
                     <Route path={'/analyze'} element={<Analyze/>}/>
                     <Route path={'/category'} element={<Category/>}/>
                     <Route path={'/profile'} element={<Profile/>}/>
@@ -137,7 +137,7 @@ function App() {
                         onClose={() => {
                             setLoginModal(false);
                             if (loginModal.title === '로그인 성공') {
-                                navigate('/'); // 성공 시 메인 페이지로 이동
+                                navigate('/home'); // 성공 시 메인 페이지로 이동
                             }
                         }}
                     />

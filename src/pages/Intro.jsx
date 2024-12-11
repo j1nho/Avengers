@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // useNavigate 임포트
+import React, {useEffect} from "react";
+import {useNavigate} from "react-router-dom"; // useNavigate 임포트
 import AOS from "aos";
 import "aos/dist/aos.css"; // AOS 스타일 불러오기
 import Header from "../component/Header";
@@ -33,17 +33,17 @@ const Intro = () => {
         <div className={"IntroPage"}>
             <Header/>
             <div className={"IntroContainer"}>
-                <div className="IntroContent_1" data-aos="fade-up">
+                <div className="IntroContent_1" data-aos="fade-down">
                     <div>
                         <h1>커플을 위한 가계부,</h1>
                         <p>함께 만드는 행복한 소비 계획 !</p>
-                        <img src={logo} alt="logo" />
+                        <img src={logo} alt="logo"/>
                     </div>
                     <div>
-                        <img src={Intro_1} alt="intro" />
+                        <img src={Intro_1} alt="intro"/>
                     </div>
                 </div>
-                <div className="IntroContent_2" data-aos="fade-down">
+                <div className="IntroContent_2" data-aos="fade-up">
                     <div>
                         <h1>각자의 이름이나 별명을 입력하고,<br/>
                             함께 사용할 비밀번호를 정해보세요!</h1>
@@ -76,7 +76,7 @@ const Intro = () => {
                 </div>
                 <div className={"IntroContent_6"}>
                     <div>
-                        <img src={Intro_5} alt="intro" data-aos="zoom-in" />
+                        <img src={Intro_5} alt="intro" data-aos="zoom-in"/>
                     </div>
                 </div>
                 <div className={"IntroContent_7"}>
@@ -106,7 +106,7 @@ const Intro = () => {
                 </div>
                 <div className={"IntroContent_10"}>
                     <div>
-                        <img src={Intro_7} alt="intro" data-aos="zoom-out" />
+                        <img src={Intro_7} alt="intro" data-aos="zoom-out"/>
                     </div>
                 </div>
                 <div className={"IntroContent_11"}>
@@ -116,7 +116,7 @@ const Intro = () => {
                 </div>
                 <div className={"IntroContent_12"}>
                     <div className={"IntroButton"}>
-                    <button onClick={handleStartClick}>시작하기</button>
+                        <button onClick={handleStartClick}>시작하기</button>
                     </div>
                 </div>
 
