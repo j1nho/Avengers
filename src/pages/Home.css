@@ -105,15 +105,17 @@
     width: 100%;
     align-items: center;
 }
-.more a {
-    display: block;
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    text-align: center;
+
+/* more */
+.more {
+     display: inline-flex;
+     align-items: center;
+ }
+.more svg {
+    display: inline-block;
+    vertical-align: middle;
 }
-/* ------------------------ Home_Box ------------------------- */
+/* ------------------------ Home_contents ------------------------- */
 
 
 /* Home_contents2 */
@@ -135,18 +137,18 @@
     padding: 25px 0 10px 35px;
     font-size: 20px;
 }
-.Home_infoBox2 .ScheduleMove {
-    text-align: right;
-    height: 25px;
-}
-.Home_infoBox2 .ScheduleMove a {
-    display: inline-block;
-    height: 25px;
-}
 
-.Home_Schedule {
+/* Home_Schedule */
+.Home_infoBox2 .Home_Schedule {
     width: 100%;
     height: 60%;
+}
+
+/* ScheduleMove */
+.ScheduleMove {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* -------------------------------- Home_contents2 ------------------------------ */

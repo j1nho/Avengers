@@ -37,7 +37,7 @@ const Home = () => {
                                     <div className={"thisMonthTitle"}>
                                         <h2>이번 달 지출</h2>
                                         <div className={"more"}>
-                                            <Link to={'/thisMonth'}>더보기<KeyboardArrowRight/></Link>
+                                            <Link to={'/thisMonth'}>더보기</Link><KeyboardArrowRight/>
                                         </div>
                                     </div>
                                     <div className={"circle_box"}>
@@ -52,7 +52,7 @@ const Home = () => {
                                         {/* 기능 넣어야되는 공간,,? */}
                                     </div>
                                     <div className={'ScheduleMove'}>
-                                        <Link to={'/schedule'}>금융 일정 작성하러 가기<KeyboardArrowRight/></Link>
+                                        <Link to={'/schedule'}>금융 일정 작성하러 가기</Link><KeyboardArrowRight/>
                                     </div>
                                 </div>
                             </div>
