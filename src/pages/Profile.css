@@ -30,7 +30,7 @@
 
 /* Profile_setting */
 .Profile_setting {
-    width: 70%;
+    width: 60%;
     height: 100%;
     margin: auto;
     padding-top: 100px;
@@ -90,6 +90,11 @@
 /* text */
 .text {
     text-align: left;
+    padding: 10px 0;
+    display: block;
+}
+.text:last-child {
+
 }
 
 .text input {
@@ -106,14 +111,15 @@
     border: 1px solid #E87D7D;
     background-color: #ffffff;
     color: #E87D7D;
-    margin-left: 15px;
 }
 
 .Profile_text p {
     font-size: 20px;
     font-weight: bold;
-    padding: 18px 0;
+    padding-bottom: 10px;
 }
 
-
+.add {
+    display: flex;
+}
 

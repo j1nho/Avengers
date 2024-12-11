@@ -5,7 +5,7 @@ import {PhotoCamera} from "@mui/icons-material";
 
 const Profile = () => {
 
-    const popup =() => {
+    const popup = () => {
         alert('추후 제작 예정입니다.')
     }
 
@@ -31,23 +31,35 @@ const Profile = () => {
                         <div className={"Profile_text"}>
                             <div className={"text"}>
                                 <p>닉네임</p>
-                                <input type={"text"}/>
-                                <button>변경</button>
+                                <div className={'add'}>
+                                    <input type={"text"}/>
+                                    <button>변경</button>
+                                </div>
                             </div>
                             <div className={"text"}>
                                 <p>한줄 목표</p>
-                                <input type={"text"}/>
-                                <button>변경</button>
+                                <div className={'add'}>
+                                    <input type={"text"}/>
+                                    <button>변경</button>
+                                </div>
                             </div>
                             <div className={"text"}>
                                 <p>관리한지</p>
-                                <input type={"date"}/>
-                                <button>변경</button>
+                                <div className={'add'}>
+                                    <input type={"date"}/>
+                                    <button>변경</button>
+                                </div>
                             </div>
                             <div className={"text"}>
                                 <p>비밀번호 변경</p>
-                                <input type={"text"}/>
-                                <button>변경</button>
+                                <div className={'add'}>
+                                    <input type={"text"}/>
+                                    <button>변경</button>
+                                </div>
+                            </div>
+                            <div className={"text"}>
+                                <p>연애 시작일❤</p>
+                                <p>22.11.06</p>
                             </div>
                         </div>
                     </div>

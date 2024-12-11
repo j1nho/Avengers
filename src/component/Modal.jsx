@@ -8,7 +8,7 @@ function Modal({ title, message, onClose }) {
             <div className="modal-content">
                 <h2>{title}</h2>
                 <p>{message}</p>
-                <button onClick={onClose}>확인</button>
+                <button className={"nextPageBtn"} onClick={onClose}>확인</button>
             </div>
         </div>
     );
