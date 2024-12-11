@@ -49,6 +49,7 @@
     cursor: pointer;
 }
 .Schedule_menu li:first-child {
+    padding-bottom: 15px;
     border-bottom: 5px solid #E87D7D;
 }
 
@@ -58,13 +59,14 @@
     justify-content: space-evenly;
     width: 100%;
     height: 55%;
+    margin-top: 30px;
 }
 .box {
-    width: 30%;
+    width: 25%;
     height: 100%;
     padding: 25px 0 0 35px;
-    background: rgba(232, 125, 125, 0.35);
-    border-radius: 10px;
+    background-color: #FDF2F2;
+    border-radius: 8px;
 }
 .box:nth-of-type(2), .box:nth-of-type(3) {
     width: 30%;
@@ -79,8 +81,6 @@
     width: 150px;
     height: 30px;
     margin: 15px 0;
-    border: none;
-    border-bottom: 1px solid #E87D7D;
 }
 
 .box .schedule_btn1 {
@@ -95,20 +95,27 @@
     font-size: 16px;
     color: #000;
     border: 1px solid #aaa;
-    border-radius: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.box .schedule_btn1 .schedule_btn01:hover {
+    border-color: #E87D7D;
 }
 
 .box input:nth-of-type(2), .box input:nth-of-type(3) {
     width: 180px;
     border: 1px solid #aaa;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .box p {
     color: #777;
 }
 
-.box .schedule_btn1 .schedule_btn03, .box .schedule_btn1 .schedule_btn04 {
+.box .schedule_btn1 .schedule_btn02 {
     width: 140px;
     height: 50px;
     margin: 25px 15px 15px 0;
@@ -117,5 +124,52 @@
     background-color: #E87D7D;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.box .schedule_btn1 .schedule_btn02:hover {
+    background-color: #d45757;
+}
+
+.schedule-item {
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.box .schedule_btn01.active {
+    background-color: #E87D7D;
+    color: white;
+    border-color: #E87D7D;
+}
+
+.schedule-item p {
+    margin: 5px 0;
+}
+
+.schedule-content {
+    flex: 1;
+}
+
+.delete-btn {
+    background-color: #E87D7D;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #d45757;
+}
+
+.schedule-item p {
+    margin: 5px 0;
 }
 
