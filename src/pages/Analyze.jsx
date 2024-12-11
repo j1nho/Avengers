@@ -83,7 +83,7 @@ const Analyze = () => {
                             <div className="Analyze_contents02">
                                 <div>
                                     <h3>이번 달 총 지출</h3>
-                                    <p className="total-expense">350,000원</p>
+                                    <p className="total-expense">360,000원</p>
                                 </div>
                                 <div>
                                     <h3>12월 고정 지출</h3>
