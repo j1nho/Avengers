@@ -4,9 +4,20 @@ import Aside from "../component/Aside";
 import Calendar from "../component/Calendar";
 import profileImg from "../images/profile.png"
 import {Link} from "react-router-dom";
+import { useState, useEffect } from 'react';
 import {KeyboardArrowRight} from '@mui/icons-material'
 
 const Home = () => {
+    const [monthlySchedules, setMonthlySchedules] = useState([]);
+
+    useEffect(() => {
+        const savedMonthlySchedules = localStorage.getItem('monthlySchedules');
+        if (savedMonthlySchedules) {
+            const parsedSchedules = JSON.parse(savedMonthlySchedules);
+            setMonthlySchedules(parsedSchedules);
+        }
+    }, []);
+
     return (
         <div className={"Home_wrap"}>
             <Header/>
@@ -49,7 +60,12 @@ const Home = () => {
                                 <div className={"Home_infoBox2"}>
                                     <h2>우리의 금융 일정</h2>
                                     <div className={'Home_Schedule'}>
-                                        {/* 기능 넣어야되는 공간,,? */}
+                                        {monthlySchedules.map((schedule, index) => (
+                                            <div key={index} className="schedule-item">
+                                                <span className="schedule-date">{schedule.date}</span>
+                                                <span className="schedule-title">{schedule.title}</span>
+                                            </div>
+                                        ))}
                                     </div>
                                     <div className={'ScheduleMove'}>
                                         <Link to={'/schedule'}>금융 일정 작성하러 가기</Link><KeyboardArrowRight/>
