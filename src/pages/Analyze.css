@@ -67,19 +67,28 @@
     margin-top: 30px;
 }
 /* Analyze_contents02 */
-.Analyze_contents02 div:first-of-type {
+.Analyze_contents02 > div:first-of-type {
     width: 350px;
     height: 130px;
     border: 1px solid #E87D7D;
     border-radius: 10px;
     margin: 30px 0 30px 34px;
 }
-.Analyze_contents02 div:nth-of-type(2) {
+.Analyze_contents02 > div:nth-of-type(2) {
     width: 350px;
     height: 370px;
     border: 1px solid #E87D7D;
     border-radius: 10px;
-    margin: 30px 0 30px 35px;
+    margin: 30px 0 30px 34px;
+}
+.Analyze_contents02 > div:nth-of-type(2) > div:first-of-type {
+    margin: 10px auto;
+    width: 330px;
+    height: 150px;
+    border-bottom: 1px solid #E87D7D;
+}
+.Analyze_contents02 > div:nth-of-type(2) > h3:nth-of-type(2) {
+    padding: 10px 0 0 30px;
 }
 
 .Analyze_contents02 div h3 {
@@ -87,10 +96,8 @@
     padding: 20px 0 0 30px;
 }
 
-/* GPT */
-
+/* div 박스 안 친구들 */
 .chart-container {
-    padding: 20px;
     height: 100%;
 }
 
@@ -101,7 +108,52 @@
     margin-top: 20px;
 }
 
+.fixed-expense-list {
+    padding: 20px;
+}
+
+.fixed-expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.fixed-expense-item span {
+    font-size: 16px;
+}
+
 /* 차트 크기 조절을 위한 스타일 */
 .Analyze_contents01 canvas {
     max-height: 180px !important;
+    padding: 15px 10px 0 10px;
+}
+
+/* ---------------------------------- */
+
+.chart-container > h3 {
+    width: 100%;
+    justify-content: space-between;
+}
+.chart-container > h3, .chart-container > h3 >span {
+    display: inline-flex;
+    align-items: center;
+}
+.chart-container > h3 >span {
+    padding-right: 20px;
+}
+
+.level {
+    margin: 10px auto;
+    width: 330px;
+    height: 100px;
+    align-content: center;
+    text-align: center;
+}
+.level > span {
+    padding: 10px 0;
+}
+
+.heart {
+    padding: 5px 0;
 }
