@@ -173,7 +173,8 @@
 
 .circle_box {
     width: 100%;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     padding-top: 10px;
 }
 .circle1 {

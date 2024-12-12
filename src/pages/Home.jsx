@@ -6,6 +6,20 @@ import profileImg from "../images/profile.png"
 import {Link} from "react-router-dom";
 import { useState, useEffect } from 'react';
 import {KeyboardArrowRight} from '@mui/icons-material'
+import { Doughnut } from 'react-chartjs-2';
+import {
+    Chart as ChartJS,
+    ArcElement,
+    Tooltip,
+    Legend
+} from 'chart.js';
+
+// Chart.js 등록
+ChartJS.register(
+    ArcElement,
+    Tooltip,
+    Legend
+);
 
 const Home = () => {
     const [monthlySchedules, setMonthlySchedules] = useState([]);
@@ -17,6 +31,39 @@ const Home = () => {
             setMonthlySchedules(parsedSchedules);
         }
     }, []);
+
+    // 차트 데이터 설정
+    const data = {
+        datasets: [{
+            data: [350000, 650000],
+            backgroundColor: [
+                '#E87D7D',
+                '#ccc'
+            ],
+            borderWidth: 0,
+            cutout: '75%',
+            hoverOffset: 4
+        }]
+    };
+
+    // 차트 옵션 설정
+    const options = {
+        plugins: {
+            tooltip: {
+                enabled: true,
+                callbacks: {
+                    label: function(context) {
+                        return context.raw.toLocaleString() + '원';
+                    }
+                }
+            },
+            legend: {
+                display: false
+            }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+    };
 
     return (
         <div className={"Home_wrap"}>
@@ -52,7 +99,20 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className={"circle_box"}>
-                                        <div className={"circle1"}>350,000</div>
+                                        <div style={{position: 'relative', width: '150px', height: '150px'}}>
+                                            <Doughnut data={data} options={options}/>
+                                            <div
+                                                style={{
+                                                    position: 'absolute',
+                                                    top: '50%',
+                                                    left: '50%',
+                                                    transform: 'translate(-50%, -50%)',
+                                                    textAlign: 'center'
+                                                }}
+                                            >
+                                                350,000
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +123,7 @@ const Home = () => {
                                         {monthlySchedules.length > 0 ? (
                                             monthlySchedules.map((schedule, index) => (
                                                 <div key={index} className="schedule-item">
-                                                    <span className="schedule-date">{schedule.date}</span>
+                                                <span className="schedule-date">{schedule.date}</span>
                                                     <span className="schedule-title">{schedule.title}</span>
                                                 </div>
                                             ))
