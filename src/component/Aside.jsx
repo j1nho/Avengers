@@ -24,7 +24,7 @@ const Aside = ({handleLogout}) => {
     return (
         <div className={"menu_container"}>
             <ul className={"menu"}>
-                <li><Home style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/">홈</Link></li>
+                <li><Home style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/home">홈</Link></li>
                 <li><MdEditSquare style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/write">가계부
                     작성</Link></li>
                 <li><BarChart style={{fontSize: '25px', color: '#F3E1E1', marginRight: "10px"}}/><Link to="/analyze">주간별/월간별

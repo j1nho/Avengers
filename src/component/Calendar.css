@@ -189,6 +189,10 @@
     padding: 10px;
     border-bottom: 1px solid #eee;
 }
+.transaction-item span {
+    width: 120px;
+    text-align: center;
+}
 .delete-btn {
     background-color: #ff6b6b;
     color: white;

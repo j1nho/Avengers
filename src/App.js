@@ -16,7 +16,6 @@ import ProtectedRoute from "./js/ProtectedRoute";
 import Analyze from "./pages/Analyze";
 import Category from "./pages/Category";
 import Profile from "./pages/Profile";
-import Save from "./pages/Save";
 import Schedule from "./pages/Schedule";
 import ThisMonth from "./pages/ThisMonth";
 import Write from "./pages/Write";
@@ -113,7 +112,6 @@ function App() {
                     <Route path={'/analyze'} element={<Analyze/>}/>
                     <Route path={'/category'} element={<Category/>}/>
                     <Route path={'/profile'} element={<Profile/>}/>
-                    <Route path={'/save'} element={<Save/>}/>
                     <Route path={'/schedule'} element={<Schedule/>}/>
                     <Route path={'/thisMonth'} element={<ThisMonth/>}/>
                     <Route path={'/write'} element={<Write/>}/>
