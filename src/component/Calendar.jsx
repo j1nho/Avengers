@@ -1,125 +1,55 @@
-import React, {useState, useEffect} from 'react';
-import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
+import React, { useState, useEffect } from 'react';
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import './Calendar.css';
 
 const Calendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
-    const [transactions, setTransactions] = useState(() => {
-        const savedTransactions = localStorage.getItem('transactions');
-        return savedTransactions ? JSON.parse(savedTransactions) : {};
-    });
+    const [transactions, setTransactions] = useState({});
     const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedType, setSelectedType] = useState('전체');
 
+    // 가계부 데이터를 로컬 저장소에서 가져오기
     useEffect(() => {
-        localStorage.setItem('transactions', JSON.stringify(transactions));
-    }, [transactions]);
+        const savedExpenses = JSON.parse(localStorage.getItem('expenses')) || [];
+        const groupedTransactions = savedExpenses.reduce((acc, expense) => {
+            const { date } = expense; // 날짜 기반으로 그룹화
+            acc[date] = acc[date] ? [...acc[date], expense] : [expense];
+            return acc;
+        }, {});
+        setTransactions(groupedTransactions);
+    }, []);
 
-    const daysInMonth = new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth() + 1,
-        0
-    ).getDate();
-
-    const firstDayOfMonth = new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        1
-    ).getDay();
-
-    // 날짜 데이터 계산 함수
-    const calculateDayTotal = (date) => {
-        if (!transactions[date]) return null;
-
-        const income = transactions[date]
-            .filter(t => t.amount > 0)
-            .reduce((sum, t) => sum + t.amount, 0);
-
-        const expense = transactions[date]
-            .filter(t => t.amount < 0)
-            .reduce((sum, t) => sum + t.amount, 0);
-
-        return {
-            income: income > 0 ? `+${income.toLocaleString()}` : null,
-            expense: expense < 0 ? expense.toLocaleString() : null
-        };
+    const getFilteredTransactions = (date) => {
+        if (!transactions[date]) return [];
+        if (selectedType === '전체') return transactions[date];
+        return transactions[date].filter(transaction => transaction.type === selectedType);
     };
 
+    const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
 
     const handleDateClick = (day) => {
         const clickedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
         setSelectedDate(clickedDate);
     };
 
-    const addTransaction = (date, amount, description, category) => {
-        const finalAmount = category === '입금' ? Math.abs(amount) : -Math.abs(amount);
+    // 날짜별 수입/지출 금액 계산
+    const calculateDayTotal = (date) => {
+        if (!transactions[date]) return null;
 
-        setTransactions(prev => {
-            const newTransactions = {
-                ...prev,
-                [date]: [...(prev[date] || []), {
-                    amount: finalAmount,
-                    description: description,
-                    category: category
-                }]
-            };
-            localStorage.setItem('transactions', JSON.stringify(newTransactions));
-            return newTransactions;
-        });
-    };
+        const income = transactions[date]
+            .filter(t => t.type === "수입")
+            .reduce((sum, t) => sum + Number(t.amount), 0);
 
-    const months = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-    ];
+        const expense = transactions[date]
+            .filter(t => t.type === "지출")
+            .reduce((sum, t) => sum - Number(t.amount), 0); // 마이너스로 변환
 
-    const deleteTransaction = (date, index) => {
-        setTransactions(prev => {
-            const newTransactions = { ...prev };
-            newTransactions[date] = [
-                ...newTransactions[date].slice(0, index),
-                ...newTransactions[date].slice(index + 1)
-            ];
-
-            // 해당 날짜의 거래 내역이 비어있으면 날짜 키 자체를 삭제
-            if (newTransactions[date].length === 0) {
-                delete newTransactions[date];
-            }
-
-            // localStorage 업데이트
-            localStorage.setItem('transactions', JSON.stringify(newTransactions));
-            return newTransactions;
-        });
-    };
-
-    const getMonthName = (date) => {
-        return months[date.getMonth()];
-    };
-
-    const getSolarHolidays = (year) => {
         return {
-            [`${year}-01-01`]: "신정",
-            [`${year}-03-01`]: "삼일절",
-            [`${year}-05-05`]: "어린이날",
-            [`${year}-06-06`]: "현충일",
-            [`${year}-08-15`]: "광복절",
-            [`${year}-10-03`]: "개천절",
-            [`${year}-10-09`]: "한글날",
-            [`${year}-12-25`]: "크리스마스"
+            income: income > 0 ? `${income.toLocaleString()}` : null,
+            expense: expense < 0 ? `-${expense.toLocaleString()}` : null
         };
     };
-
-    const isHoliday = (date) => {
-        const year = date.getFullYear();
-        const formattedDate = `${year}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-        const solarHolidays = getSolarHolidays(year);
-
-        // 양력 공휴일 체크
-        if (solarHolidays[formattedDate]) return true;
-
-        // 일요일 체크
-        return date.getDay() === 0;
-    };
-
 
     const renderDays = () => {
         const days = [];
@@ -130,9 +60,7 @@ const Calendar = () => {
 
         for (let day = 1; day <= daysInMonth; day++) {
             const dateKey = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
-            const currentDayDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
-            const isRedDay = isHoliday(currentDayDate);
-            const dayData = calculateDayTotal(dateKey);
+            const dayTotal = calculateDayTotal(dateKey);
 
             days.push(
                 <div
@@ -140,42 +68,53 @@ const Calendar = () => {
                     className={`calendar-day ${selectedDate === dateKey ? 'selected' : ''}`}
                     onClick={() => handleDateClick(day)}
                 >
-                <span className={`day-number ${isRedDay ? 'holiday' : ''}`}>
-                    {day}
-                </span>
-                    {dayData && (
+                    <span className="day-number">{day}</span>
+                    {dayTotal && (
                         <div className="day-data">
-                            {dayData.income && (
-                                <span style={{ color: '#4dabf7' }}>{dayData.income}</span>
+                            {dayTotal.income && (
+                                <span style={{ color: '#388BCF' }}>
+                                +{dayTotal.income.toLocaleString()}
+                            </span>
                             )}
-                            {dayData.expense && (
-                                <span style={{ color: '#ff6b6b' }}>{dayData.expense}</span>
+                            {dayTotal.expense && (
+                                <span style={{ color: '#E87D7D' }}>
+                                {dayTotal.expense.toLocaleString()}
+                            </span>
                             )}
                         </div>
                     )}
                 </div>
             );
         }
+
         return days;
+    };
+
+    const getMonthName = (date) => {
+        const months = [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        return months[date.getMonth()];
     };
 
     return (
         <div className="calendar">
             <div className="calendar-header">
-                <div className={"calendar-month"}>
+                <div className="calendar-month">
                     <button onClick={() => setCurrentDate(new Date(currentDate.setMonth(currentDate.getMonth() - 1)))}>
-                        <IoIosArrowBack/>
+                        <IoIosArrowBack />
                     </button>
-                    <div className={"calendar_title"}>
+                    <div className="calendar-title">
                         <h3>{currentDate.getFullYear()}</h3>
                         <h2>{getMonthName(currentDate)}</h2>
                     </div>
                     <button onClick={() => setCurrentDate(new Date(currentDate.setMonth(currentDate.getMonth() + 1)))}>
-                        <IoIosArrowForward/>
+                        <IoIosArrowForward />
                     </button>
                 </div>
                 <div className="calendar-weekdays">
-                    <div className="sunday">Sun</div>
+                    <div>Sun</div>
                     <div>Mon</div>
                     <div>Tue</div>
                     <div>Wed</div>
@@ -183,60 +122,32 @@ const Calendar = () => {
                     <div>Fri</div>
                     <div>Sat</div>
                 </div>
-                <div className="calendar-days">
-                    {renderDays()}
-                </div>
+                <div className="calendar-days">{renderDays()}</div>
             </div>
-            {selectedDate && (
-                <div className="transaction-form">
-                    <form onSubmit={(e) => {
-                        e.preventDefault();
-                        const amount = Math.abs(Number(e.target.amount.value)); // 절대값으로 변환
-                        const description = e.target.description.value;
-                        const category = e.target.category.value;
-
-                        addTransaction(selectedDate, amount, description, category);
-                        e.target.reset();
-                    }}>
-                        <select name="category" required>
-                            <option value="선택">선택</option>
-                            <option value="숙소">🏟숙소</option>
-                            <option value="쇼핑">🛒쇼핑</option>
-                            <option value="교통">✈교통</option>
-                            <option value="식비">🍙식비</option>
-                            <option value="입금">💎입금</option>
-                        </select>
-                        <input
-                            type="number"
-                            name="amount"
-                            placeholder="금액 입력"
-                            required
-                        />
-                        <input
-                            type="text"
-                            name="description"
-                            placeholder="설명 입력"
-                            required
-                        />
-                        <button type="submit">추가</button>
-                    </form>
-                    <div className="transaction-list">
-                        <h3>{selectedDate} 내역</h3>
+            {selectedDate ? (
+                <div className="transaction-details">
+                    <h3>{selectedDate} 내역</h3>
+                    <select value={selectedType} onChange={(e) => setSelectedType(e.target.value)}>
+                        <option>전체</option>
+                        <option>수입</option>
+                        <option>지출</option>
+                    </select>
+                    <div>
                         {transactions[selectedDate]?.map((transaction, index) => (
                             <div key={index} className="transaction-item">
-                                <span>{transaction.category}</span>
-                                <span>{transaction.amount.toLocaleString()}원</span>
-                                <span>{transaction.description}</span>
-                                <button
-                                    className="delete-btn"
-                                    onClick={() => deleteTransaction(selectedDate, index)}
-                                >
-                                    삭제
-                                </button>
+                                <span>{transaction.type}</span>
+                                <span>
+                                    {transaction.type === "수입" ? `+${Number(transaction.amount).toLocaleString()}`
+                                        : `-${Number(transaction.amount).toLocaleString()}`}원
+                                </span>
+                                <span>{transaction.merchant || "N/A"}</span>
+                                <span>{transaction.memo || "메모 없음"}</span>
                             </div>
                         ))}
                     </div>
                 </div>
+            ) : (
+                <div className="transaction-empty">날짜를 선택하세요.</div>
             )}
         </div>
     );
