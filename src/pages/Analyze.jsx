@@ -14,6 +14,7 @@ import Header from "../component/Header";
 import Aside from "../component/Aside";
 import './Analyze.css';
 import {Link} from "react-router-dom";
+import { useState, useEffect } from 'react';
 import {KeyboardArrowRight} from "@mui/icons-material";
 import {FavoriteBorderOutlined} from "@mui/icons-material"
 
@@ -29,6 +30,17 @@ ChartJS.register(
 );
 
 const Analyze = () => {
+    const [fixedExpenses, setFixedExpenses] = useState([]);
+
+    useEffect(() => {
+        const savedFixedSchedules = localStorage.getItem('fixedSchedules');
+        if (savedFixedSchedules) {
+            const parsedSchedules = JSON.parse(savedFixedSchedules);
+            // 지출 타입만 필터링
+            const expenses = parsedSchedules.filter(schedule => schedule.type === '지출');
+            setFixedExpenses(expenses);
+        }
+    }, []);
 
         const weeklyData = {
             labels: ['12월 1주차', '12월 2주차', '12월 3주차', '12월 4주차'],
@@ -157,8 +169,15 @@ const Analyze = () => {
                                     </div>
                                     <div>
                                         <h3>12월 고정 지출</h3>
-                                        <div>
-                                            {/* 고정지출 로컬 불러와야함 */}
+                                        <div className="fixed-expenses">
+                                            {fixedExpenses.map((expense, index) => (
+                                                <div key={index} className="fixed-expense-item">
+                                                    <span className="expense-title">{expense.title}</span>
+                                                    <span className="expense-amount">
+                                                        {expense.amount === '변동' ? '변동' : `${expense.amount.toLocaleString()}원`}
+                                                     </span>
+                                                </div>
+                                            ))}
                                         </div>
                                         <h3>무지출 챌린지</h3>
                                         <div className={"level"}>
