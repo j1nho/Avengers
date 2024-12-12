@@ -159,7 +159,6 @@ const Analyze = () => {
                                         <h3>12월 고정 지출</h3>
                                         <div>
                                             {/* 고정지출 로컬 불러와야함 */}
-
                                         </div>
                                         <h3>무지출 챌린지</h3>
                                         <div className={"level"}>
