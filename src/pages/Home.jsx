@@ -60,17 +60,22 @@ const Home = () => {
                                 <div className={"Home_infoBox2"}>
                                     <h2>우리의 금융 일정</h2>
                                     <div className={'Home_Schedule'}>
-                                        {monthlySchedules.map((schedule, index) => (
-                                            <div key={index} className="schedule-item">
-                                                <span className="schedule-date">{schedule.date}</span>
-                                                <span className="schedule-title">{schedule.title}</span>
-                                            </div>
-                                        ))}
+                                        {monthlySchedules.length > 0 ? (
+                                            monthlySchedules.map((schedule, index) => (
+                                                <div key={index} className="schedule-item">
+                                                    <span className="schedule-date">{schedule.date}</span>
+                                                    <span className="schedule-title">{schedule.title}</span>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <p className="no-schedule-message">현재 등록된 금융 일정이 없습니다.</p>
+                                        )}
                                     </div>
                                     <div className={'ScheduleMove'}>
                                         <Link to={'/schedule'}>금융 일정 작성하러 가기</Link><KeyboardArrowRight/>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

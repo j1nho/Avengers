@@ -73,7 +73,7 @@
 .Home_infoBox {
     width: 45%;
     height: 250px;
-    border: 1px solid #aaa;
+    border: 1px solid #E87D7D;
     border-radius: 15px;
 }
 .Home_infoBox h2 {
@@ -129,7 +129,7 @@
 .Home_infoBox2 {
     width: 97.5%;
     height: 250px;
-    border: 1px solid #aaa;
+    border: 1px solid #E87D7D;
     border-radius: 15px;
 }
 
@@ -153,6 +153,14 @@
 .Home_Schedule .schedule-item .schedule-title {
     text-align: right;
 }
+/* 금융일정 없을 경우 */
+.no-schedule-message {
+    text-align: center;
+    padding: 50px 20px 0 0 ;
+    color: #888;
+    font-size: 16px;
+}
+
 
     /* ScheduleMove */
 .ScheduleMove {
