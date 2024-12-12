@@ -72,12 +72,20 @@
     border-bottom: 1px solid #aaa;
 }
 
-.Category_title h1 {
+.Category_title div h1 {
     padding: 75px 0 45px 70px;
     font-size: 40px;
     border: none;
 }
 
+.Category_title div {
+    display: flex;
+}
+.Category_title .Category_setting > select {
+    width: 120px;
+    height: 30px;
+    margin: 85px 0 0 20px ;
+}
 /*-----------------------------------------------------------------------------------*/
 
 /* button */
@@ -168,7 +176,7 @@ input {
 /*-----------------------------------------------------------------------------------*/
 
 /* No Expenses */
-.Category_container .Category_contents .expense-list ul > p {
+.Category_container .Category_contents .expense-list ul  p {
     margin: 80px 350px;
     color: #999;
 }

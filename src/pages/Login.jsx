@@ -24,7 +24,7 @@ const Login = ({onLogin}) => {
                     </div>
                     <div className={"passwordBox"}>
                         <p>PassWord</p>
-                        <input type={"text"} className={"password"} onChange={event => setPassword(event.target.value)}/>
+                        <input type={"password"} className={"password"} onChange={event => setPassword(event.target.value)}/>
                     </div>
                     <div className={"login"}>
                         <button onClick={() => onLogin(email, password)}>Log In</button>

@@ -15,10 +15,19 @@
     width: 95%;
     margin: auto;
 }
-.Write_title h1 {
+.Write_title div {
+    display: flex;
+    border-bottom: 1px solid #aaa;
+}
+.Write_title div > h1 {
     padding: 75px 0 45px 70px;
     font-size: 40px;
-    border-bottom: 1px solid #aaa;
+}
+.Write_title div .Write_setting {
+    width: 120px;
+    height: 30px;
+    margin: 85px 0 0 20px;
+    border: none;
 }
 
 /* Write_contents */
@@ -173,7 +182,6 @@
     width: 120px; /* 메모 영역 */
     text-align: center;
 }
-
 
 /* 지출, 수입 앞에 점을 스타일링 */
 .Write_container .expense_list .expense-type {
