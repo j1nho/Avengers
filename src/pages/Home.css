@@ -142,9 +142,19 @@
 .Home_infoBox2 .Home_Schedule {
     width: 100%;
     height: 60%;
+    padding: 0 25px;
+}
+.Home_Schedule .schedule-item {
+    width: 880px;
+}
+.Home_Schedule .schedule-item .schedule-date, .Home_Schedule .schedule-item .schedule-title {
+    width: 500px;
+}
+.Home_Schedule .schedule-item .schedule-title {
+    text-align: right;
 }
 
-/* ScheduleMove */
+    /* ScheduleMove */
 .ScheduleMove {
     display: flex;
     justify-content: flex-end;
