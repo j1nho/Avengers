@@ -121,3 +121,81 @@
     font-size: 12px;
 }
 
+/* 가계부 작성 추가 값 표출 화면 */
+
+.Write_container .expense_list {
+    width: 100%;
+    height: 100%;
+}
+.Write_container .expense_list > ul  {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.Write_container .expense_list ul > li {
+    width: 100%;
+    height: 50px;
+}
+.Write_container .expense_list ul > li > span {
+    display: inline-block;
+    padding: 10px;
+}
+
+.Write_container .expense_list ul > li > span:nth-child(2) {
+    width: 100px; /* 지출/수입 영역 */
+    text-align: center;
+}
+
+.Write_container .expense_list ul > li > span:nth-child(3) {
+    width: 130px; /* 날짜 영역 */
+}
+
+.Write_container .expense_list ul > li > span:nth-child(4) {
+    width: 170px; /* 카테고리 영역 */
+    text-align: center;
+}
+
+.Write_container .expense_list ul > li > span:nth-child(5) {
+    width: 120px; /* 결제수단 영역 */
+    text-align: center;
+}
+
+.Write_container .expense_list ul > li > span:nth-child(6) {
+    width: 170px; /* 거래처 영역 */
+    text-align: center;
+}
+
+.Write_container .expense_list ul > li > span:nth-child(7) {
+    width: 180px; /* 금액 영역 */
+    text-align: center;
+}
+.Write_container .expense_list ul > li > span:nth-child(8) {
+    width: 120px; /* 메모 영역 */
+    text-align: center;
+}
+
+
+/* 지출, 수입 앞에 점을 스타일링 */
+.Write_container .expense_list .expense-type {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle; /* 수평 정렬 */
+}
+/* 점과 텍스트를 같은 선상에 배치 */
+.Write_container .expense-details {
+    display: inline-flex;
+    align-items: center; /* 텍스트와 점이 수평으로 정렬되도록 */
+}
+.Write_container .expense_list .expense-expense {
+    background-color: #388BCF; /* 지출은 #388BCF 블루계열 */
+}
+
+.Write_container .expense_list .expense-income {
+    background-color: #E87D7D; /* 수입은 #BF2A2A 주제색 */
+}
+.Write_container .expense-category {
+    margin-left: 8px;
+}
