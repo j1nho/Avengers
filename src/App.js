@@ -3,7 +3,7 @@ import './App.css';
 // import Aside from "./component/Aside";
 // import Home from "./pages/Home";
 // import Calendar from "./component/Calendar";
-import {Link, Route, Routes, useNavigate} from "react-router-dom";
+import {Link, Navigate, Route, Routes, useNavigate} from "react-router-dom";
 import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -37,7 +37,7 @@ function App() {
             } else { // 사용자가 로그아웃인 상태
                 setIsAuthenticated(false);
                 setUser(null);
-                navigate('/login');
+                navigate('/intro');
             }
         });
         return () => {
@@ -105,7 +105,8 @@ function App() {
         <div className="App">
             <AuthContext.Provider value={{user, isAuthenticated}}>
                 <Routes>
-                    <Route path={"/"} element={<Intro />} />
+                    <Route path="/" element={<Navigate to="/intro" />} />
+                    <Route path={"/intro"} element={<Intro />} />
                     <Route path={'/login'} element={<Login onLogin={onLogin}/>}/>
                     <Route path={'/join'} element={<Join onJoin={onJoin}/>}/>
                     <Route path={'/home'} element={<Home/>}/>
