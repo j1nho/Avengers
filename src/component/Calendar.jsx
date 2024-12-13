@@ -133,13 +133,13 @@ const Calendar = () => {
                         <option>지출</option>
                     </select>
                     <div>
-                        {transactions[selectedDate]?.map((transaction, index) => (
+                        {getFilteredTransactions(selectedDate).map((transaction, index) => (
                             <div key={index} className="transaction-item">
                                 <span>{transaction.type}</span>
                                 <span>
-                                    {transaction.type === "수입" ? `+${Number(transaction.amount).toLocaleString()}`
-                                        : `-${Number(transaction.amount).toLocaleString()}`}원
-                                </span>
+                        {transaction.type === "수입" ? `+${Number(transaction.amount).toLocaleString()}`
+                            : `-${Number(transaction.amount).toLocaleString()}`}원
+                    </span>
                                 <span>{transaction.merchant || "N/A"}</span>
                                 <span>{transaction.memo || "메모 없음"}</span>
                             </div>
@@ -149,6 +149,7 @@ const Calendar = () => {
             ) : (
                 <div className="transaction-empty">날짜를 선택하세요.</div>
             )}
+
         </div>
     );
 };
