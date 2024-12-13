@@ -17,12 +17,14 @@ const Intro = () => {
     const navigate = useNavigate(); // useNavigate 훅 호출
     // AOS 초기화
     useEffect(() => {
-        AOS.init({
-            duration: 1000, // 애니메이션 지속 시간
-            offset: 120, // 애니메이션 시작 지점
-            easing: "ease-in-out", // 애니메이션 이징 효과
-            once: true, // 스크롤 한 번만 애니메이션 실행
-        });
+        setTimeout(() => {
+            AOS.init({
+                duration: 1000,
+                offset: 120,
+                easing: "ease-in-out",
+                once: false, // 'once' 옵션을 false로 변경
+            });
+        }, 100); // 100ms 지연
     }, []);
     // 시작하기 버튼 클릭 이벤트 핸들러
     const handleStartClick = () => {

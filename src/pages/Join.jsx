@@ -20,7 +20,7 @@ const Join = ({onJoin}) => {
                     </div>
                     <div className={"passwordBox"}>
                         <p>PassWord</p>
-                        <input type={"text"} className={"password" } value={password} onChange={event => setPassword(event.target.value)}/><br/>
+                        <input type={"password"} className={"password" } value={password} onChange={event => setPassword(event.target.value)}/><br/>
                         <span>비밀번호는 최소 6자리</span>
                     </div>
                     <div className={"nameBox"}>
